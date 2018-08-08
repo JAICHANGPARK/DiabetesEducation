@@ -8,17 +8,24 @@
 
 package com.dreamwalker.diabeteseducation;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 public class ChildViewHolder extends com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder {
-
+    private static final String TAG = "ChildViewHolder";
     private TextView childTextView;
 
     public ChildViewHolder(View itemView) {
         super(itemView);
         childTextView = (TextView) itemView.findViewById(R.id.list_item_artist_name);
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+                Log.e(TAG, "onClick: +clicked "  + childTextView.getText().toString());
+            }
+        });
     }
 
     public void setArtistName(String name) {

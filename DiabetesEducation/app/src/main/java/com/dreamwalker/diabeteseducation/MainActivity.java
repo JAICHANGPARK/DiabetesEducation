@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static List<Big> makeGenres() {
 
-        return Arrays.asList(makeRockGenre());
+        return Arrays.asList(makeRockGenre(),makeRockGenre(),makeRockGenre(),makeRockGenre());
 //        return Arrays.asList(makeRockGenre(),
 //                makeJazzGenre(),
 //                makeClassicGenre(),

@@ -9,6 +9,7 @@
 package com.dreamwalker.diabeteseducation;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,18 +20,27 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, ChildViewHolder>{
+public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, ChildViewHolder> {
     Context context;
     ArrayList<String> parantList;
     ArrayList<String> childList;
 
     EduAdapter.OnItemClickListener listener;
 
-    public interface OnItemClickListener{
+    private static final String TAG = "EduAdapter";
+
+    public interface OnItemClickListener {
         void onItemClick(Child items);
     }
 
-    public EduAdapter(List<? extends ExpandableGroup> groups , OnItemClickListener listener) {
+    public EduAdapter(List<? extends ExpandableGroup> groups) {
+        super(groups);
+//        this.context = context;
+//        this.parantList = parantList;
+//        this.childList = childList;
+    }
+
+    public EduAdapter(List<? extends ExpandableGroup> groups, OnItemClickListener listener) {
         super(groups);
         this.listener = listener;
 //        this.context = context;
@@ -54,10 +64,16 @@ public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, Chi
     public void onBindChildViewHolder(ChildViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
         final Child artist = ((Big) group).getItems().get(childIndex);
         holder.setArtistName(artist.getName());
-        holder.binData(artist, listener);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.e(TAG, "onClick: " + artist.getName() );
+            }
+        });
+        //holder.binData(artist, listener);
 
 
-       // holder.setArtistName(childList.get(childIndex));
+        // holder.setArtistName(childList.get(childIndex));
     }
 
     @Override
