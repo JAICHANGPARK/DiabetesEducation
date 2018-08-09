@@ -14,9 +14,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.ArrayList;
 
@@ -48,7 +48,7 @@ public class EduImageAdapter extends RecyclerView.Adapter<EduImageAdapter.EduIma
     }
 
     class EduImageViewHolder extends RecyclerView.ViewHolder{
-        ImageView imageView;
+        PhotoView imageView;
 
         public EduImageViewHolder(@NonNull View itemView) {
             super(itemView);
