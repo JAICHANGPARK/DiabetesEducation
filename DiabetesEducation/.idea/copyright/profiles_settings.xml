@@ -1,3 +1,7 @@
 <component name="CopyrightManager">
-  <settings default="DREAMWALKER" />
+  <settings default="DREAMWALKER">
+    <module2copyright>
+      <element module="Project Files" copyright="DREAMWALKER" />
+    </module2copyright>
+  </settings>
 </component>

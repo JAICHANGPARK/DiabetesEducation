@@ -9,6 +9,7 @@
 package com.dreamwalker.diabeteseducation;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,9 +34,9 @@ public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, Chi
         void onItemClick(Child items);
     }
 
-    public EduAdapter(List<? extends ExpandableGroup> groups) {
+    public EduAdapter(Context context, List<? extends ExpandableGroup> groups) {
         super(groups);
-//        this.context = context;
+        this.context = context;
 //        this.parantList = parantList;
 //        this.childList = childList;
     }
@@ -61,12 +62,14 @@ public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, Chi
     }
 
     @Override
-    public void onBindChildViewHolder(ChildViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
+    public void onBindChildViewHolder(final ChildViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
         final Child artist = ((Big) group).getItems().get(childIndex);
         holder.setArtistName(artist.getName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                context.startActivity(new Intent(context, EduImageActivity.class));
+
                 Log.e(TAG, "onClick: " + artist.getName() );
             }
         });
