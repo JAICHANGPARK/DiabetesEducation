@@ -15,7 +15,7 @@ public class EduWordAdapter extends RecyclerView.Adapter<EduWordAdapter.ViewHold
     private Context mContext;
     private ArrayLIst<DataForm> dataList;
 
-    public EduWordAdapter(Context mContext, ArrayList<DataForm> dataList){
+    public EduWordAdapter(Context mContext, ArrayList<Integer> dataList){
         this.mContext = mContext;
         this.dataList = dataList;
     }
@@ -45,5 +45,8 @@ public class EduWordAdapter extends RecyclerView.Adapter<EduWordAdapter.ViewHold
         dataList.remove(position);
         notifyItemRemoved(position);
         notifyItemRangeChanged(position, dataList.size());
+    }
+
+    private class ArrayLIst<T> {
     }
 }

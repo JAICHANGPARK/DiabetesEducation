@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ public class EduWordActivity extends AppCompatActivity {
 
     RecyclerView recycler_view;
     EduWordAdapter eduWordAdapter;
+    ImageView imageView;
+    ArrayList<Integer> imageList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,7 @@ public class EduWordActivity extends AppCompatActivity {
         recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
         recycler_view.setLayoutManager(new LinearLayoutManager(this));  // 한 줄로
 
-        eduWordAdapter = new EduWordAdapter(this, list);  // 배열이니까
+        eduWordAdapter = new EduWordAdapter(this, imageList);
         recycler_view.setAdapter(eduWordAdapter);  // setAdapter();
     }
 }
