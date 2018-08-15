@@ -1,10 +1,13 @@
 package com.dreamwalker.diabeteseducation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +16,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     EduAdapter adapter;
-
+    Button btn_word_move;
     RecyclerView recyclerView;
 
     ArrayList<String> bigList = new ArrayList<>();
@@ -24,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btn_word_move = (Button) findViewById(R.id.btn_word_move);
+        btn_word_move.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 버튼 이벤트
+                // 화면 넘어감
+                Intent intent = new Intent(MainActivity.this, EduWordActivity.class);
+                startActivity(intent);
+            }
+        });
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
@@ -35,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
         adapter = new EduAdapter(this,makeGenres());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
     }
 
     private List<Big> makeGenres() {
@@ -151,10 +163,8 @@ public class MainActivity extends AppCompatActivity {
         Child child0 = new Child(getResources().getString(R.string.child_parent_70));
         Child child1 = new Child(getResources().getString(R.string.child_parent_71));
 
-
         return Arrays.asList(child0, child1);
     }
-
 
     private Big makeParentNine() {
         return new Big(getResources().getString(R.string.parent_8), makeChildNine());
