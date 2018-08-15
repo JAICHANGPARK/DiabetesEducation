@@ -14,9 +14,18 @@ import java.util.List;
 
 public class EduWordActivity extends AppCompatActivity {
 
+    RecyclerView recycler_view;
+    EduWordAdapter eduWordAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_edu_word);
+
+        recycler_view = (RecyclerView) findViewById(R.id.recycler_view);
+        recycler_view.setLayoutManager(new LinearLayoutManager(this));  // 한 줄로
+
+        eduWordAdapter = new EduWordAdapter(this, list);  // 배열이니까
+        recycler_view.setAdapter(eduWordAdapter);  // setAdapter();
     }
 }
