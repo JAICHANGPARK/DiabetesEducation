@@ -59,4 +59,27 @@
     <string name="child_parent_81">발관리 방법</string>
     <string name="child_parent_82">발의 피부상태 관찰하기</string>
     <string name="child_parent_83">당뇨병성 발의 합병증 예방을 위한 지침</string>
+
+
+
+    <string name="parent_2_0"> 당뇨병 </string>
+    <string name="parent_2_1"> 제 1형 당뇨병 </string>
+    <string name="parent_2_2"> 제 2형 당뇨병 </string>
+    <string name="parent_2_3"> 임신성 당뇨병 </string>
+    <string name="parent_2_4"> 저혈당 </string>
+    <string name="parent_2_5"> 당화혈색소 </string>
+    <string name="parent_2_6"> 당뇨 지식 </string>
+    <string name="parent_2_7"> 자가 간호 </string>
+    <string name="parent_2_8"> 당뇨 자기 관리 </string>
+    <string name="parent_2_9"> 혈당강하제 </string>
+    <string name="parent_2_10"> 내당능장애 </string>
+    <string name="parent_2_11"> 동맥경화 </string>
+    <string name="parent_2_12"> 포도당 </string>
+    <string name="parent_2_13"> 인슐린 </string>
+    <string name="parent_2_14"> 당부하검사 </string>
+    <string name="parent_2_15"> 인슐린 저항성 </string>
+    <string name="parent_2_16"> 고혈압 </string>
+    <string name="parent_2_17"> 다갈 </string>
+    <string name="parent_2_18"> 다뇨 </string>
+    <string name="parent_2_19"> 다식 </string>
 </resources>
