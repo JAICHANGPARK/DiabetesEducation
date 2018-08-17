@@ -4,23 +4,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class EduWordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tvPrice;
+        TextView diabetes_list;
         MyViewHolder(View view){
             super(view);
-            tvPrice = view.findViewById(R.id.tv_price);
+            diabetes_list = view.findViewById(R.id.diabetes_list);
         }
     }
 
-    private ArrayList<FoodInfo> foodInfoArrayList;
-    EduWordAdapter(ArrayList<FoodInfo> foodInfoArrayList){
-        this.foodInfoArrayList = foodInfoArrayList;
+    private ArrayList<WordInfo> wordInfoArrayList;
+    EduWordAdapter(ArrayList<WordInfo> wordInfoArrayList){
+        this.wordInfoArrayList = wordInfoArrayList;
     }
 
     @Override
@@ -32,11 +31,11 @@ public class EduWordAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         MyViewHolder myViewHolder = (MyViewHolder) holder;
-        myViewHolder.tvPrice.setText(foodInfoArrayList.get(position).price);
+        myViewHolder.diabetes_list.setText(wordInfoArrayList.get(position).list);
     }
 
     @Override
     public int getItemCount() {
-        return foodInfoArrayList.size();
+        return wordInfoArrayList.size();
     }
 }
