@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 // 버튼 이벤트
                 // 화면 넘어감
-                Intent intent = new Intent(MainActivity.this, EduWordActivity.class);
+
+                // Toast.makeText(getApplicationContext(), "화면을 넘긴다.", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), EduWordActivity.class);
                 startActivity(intent);
             }
         });

@@ -17,6 +17,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".EduImageActivity"></activity>
+        <activity android:name=".EduWordActivity"></activity>
     </application>
-
 </manifest>
