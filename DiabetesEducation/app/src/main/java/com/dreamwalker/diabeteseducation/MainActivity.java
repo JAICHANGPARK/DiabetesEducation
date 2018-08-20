@@ -11,9 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Dialog dialog;  // 팝업창
-    final int[] selectedItem = {0};  // 팝업창의 선택목록 표시
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,11 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 // 교육(추가자료) 페이지로 이동
                 Intent intent_edu = new Intent(MainActivity.this, EduWordActivity.class);
                 startActivity(intent_edu);
-                break;
-            case R.id.action_extre:
-                // 어플에 대한 사용법 간단하게
-                // dialog
-                Toast.makeText(getApplicationContext(), "준비중이예유", Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

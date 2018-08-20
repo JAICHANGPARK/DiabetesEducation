@@ -1,9 +1,5 @@
 package com.dreamwalker.diabeteseducation;
 
-/**
- * Created by junsuk on 2017. 8. 8..
- */
-
 public class CardItem {
     private String contents;
 

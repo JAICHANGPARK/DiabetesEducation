@@ -61,7 +61,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     @Override
     public void onItemClicked(int position) {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        // 제목셋팅
+        // 제목설정
         alertDialogBuilder.setTitle(title(position));
         alertDialogBuilder
                 .setMessage(content(position))
@@ -87,7 +87,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
 
         String content(int position){
         String[] str_content = {
-                // 당뇨병
+                // 당뇨병 책갈피
                 "혈액 속의 포도당 수치가 정상인보다 높아 몸에서 포도당이 소변으로 배출됩니다.",
                 "인슐린의 부족으로 경구용 혈당강하제는 효과가 없고 인슐린 치료가 반드시 필요합니다. 주로 유년기,  사춘기 연령층에서 발생합니다.",
                 "당뇨병의 대부분을 차지하며 식사 계획읠 따르고 꾸준히 운동하는 것만으로는 혈당 관리가 되지 않는 경우도 있습니다. 거의 항상 약이 필요합니다.",
