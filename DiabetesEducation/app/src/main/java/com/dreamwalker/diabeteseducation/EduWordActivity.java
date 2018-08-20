@@ -31,9 +31,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         // 표시할 임시 데이터
         List<CardItem> dataList = new ArrayList<>();
         dataList.add(new CardItem("당뇨병"));
-        dataList.add(new CardItem("제 1형 당뇨병"));
-        dataList.add(new CardItem("제 2형 당뇨병"));
-        dataList.add(new CardItem("임신성 당뇨병"));
+        dataList.add(new CardItem("공복혈당"));
         dataList.add(new CardItem("저혈당"));
         dataList.add(new CardItem("당화혈색소"));
         dataList.add(new CardItem("당뇨 지식"));
@@ -47,9 +45,6 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         dataList.add(new CardItem("당부하검사"));
         dataList.add(new CardItem("인슐린 저항성"));
         dataList.add(new CardItem("고혈압"));
-        dataList.add(new CardItem("다갈"));
-        dataList.add(new CardItem("다뇨"));
-        dataList.add(new CardItem("다식"));
         dataList.add(new CardItem("...etc"));
 
         // 어댑터 설정
@@ -76,7 +71,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         }
 
         String title(int position){
-        String[] str_title = {"당뇨병", "제 1형 당노병", "제 2형 당뇨병","임신성 당뇨병",
+        String[] str_title = {"당뇨병","공복혈당",
                 "저혈당", "당화혈색소", "당뇨 지식", "자가 간호",
                 "당뇨 자기 관리", "혈당강하제", "내당능장애", "동맥경화",
                 "포도당", "인슐린" , "당부하검사", "인슐린 저항성",
@@ -87,11 +82,10 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
 
         String content(int position){
         String[] str_content = {
-                // 당뇨병 책갈피
+                // 책갈피, 구분하기 편하게
+                // 당뇨병
                 "혈액 속의 포도당 수치가 정상인보다 높아 몸에서 포도당이 소변으로 배출됩니다.",
-                "인슐린의 부족으로 경구용 혈당강하제는 효과가 없고 인슐린 치료가 반드시 필요합니다. 주로 유년기,  사춘기 연령층에서 발생합니다.",
-                "당뇨병의 대부분을 차지하며 식사 계획읠 따르고 꾸준히 운동하는 것만으로는 혈당 관리가 되지 않는 경우도 있습니다. 거의 항상 약이 필요합니다.",
-                "임신 중 분비되는 호르몬이 인슐린의 효과를 감소시킬 수 있어 발생하였다가 출산 후에는 대부분 사라지는 일시적인 당뇨병입니다.",
+                "8시간 이상 칼로리 섭취를 하지 않고 정맥에서 채혈해서 뽑은 혈액입니다.",
                 // 저혈당
                 "혈당이 70mg/dL 이하로 내려가는 경우를 말하며, 대개 관련 증상이 있습니다.",
                 "혈당이 증가되어 적혈구에 있는 혈색소에 포도당이 붙은 상태를 말한다. 지난 2-3개월간의 평균 혈당 농도를 정확히 파악할 수 있는 측정 수치이다.",
