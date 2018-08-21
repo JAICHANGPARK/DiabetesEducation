@@ -93,4 +93,9 @@
     <string name="child_parent_2_13"> 몸에서 인슐린의 적용이 감소된 것을 의미한다.\n인슐린의 기능이 떨어져 세포가 포도당을 효과적으로 연소하지 못하는 것을 말한다. </string>
     <string name="child_parent_2_14"> 혈압이 정상치보다 높으면 고혈압이라고 한다. </string>
     <string name="child_parent_2_15"> 추가예정 </string>
+
+    <string name="oops1"> EDUCATION </string>
+    <string name="oops2"> 용어 </string>
+    <string name="oops3"> 메뉴얼 </string>
+    <string name="oops4"> 확인 </string>
 </resources>

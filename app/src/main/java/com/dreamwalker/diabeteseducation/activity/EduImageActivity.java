@@ -26,7 +26,6 @@ public class EduImageActivity extends AppCompatActivity {
     LinearLayoutManager linearLayoutManager;
     ArrayList<Integer> imageList;
     EduImageAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
