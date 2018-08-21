@@ -8,6 +8,8 @@ jdk:
 env:
   - GRADLE_OPTS="-XX:MaxPermSize=256m"
 
+sudo: required
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -22,6 +24,7 @@ android:
     - android-28
 
     # Additional components
+    - extra-android-support
     - extra-android-m2repository
     - addon-google_apis-google-19
 
@@ -35,6 +38,7 @@ before_install:
   - yes | sdkmanager "platforms;android-28"
 
 script:
-   - chmod +x ./gradlew build connectedCheck
+  - ./gradlew assembleDebug --stacktrace
+  #  - chmod +x ./gradlew build connectedCheck
   #  - chmod +x ./gradlew build connectedCheck --stacktrace
 #   - bash config/travis/validate_fastlane_metadata.sh
