@@ -22,11 +22,12 @@ public class EduPdfActivity extends AppCompatActivity {
     ArrayList<String> bigList = new ArrayList<>();
     ArrayList<String> childList = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_pdf);
+
+
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
