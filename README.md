@@ -1,4 +1,4 @@
-# android_diabetes_education
+# DiabetesEducation For Android
 
 [![Build Status](https://travis-ci.com/JAICHANGPARK/DiabetesEducation.svg?branch=master)](https://travis-ci.com/JAICHANGPARK/DiabetesEducation)
 
