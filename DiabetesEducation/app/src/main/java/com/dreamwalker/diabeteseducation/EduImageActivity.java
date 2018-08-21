@@ -27,8 +27,9 @@ public class EduImageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_image);
+
         recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
+        recyclerView.setHasFixedSize(true); //
         linearLayoutManager  = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 

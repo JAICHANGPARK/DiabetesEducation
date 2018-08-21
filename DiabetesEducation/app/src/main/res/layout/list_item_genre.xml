@@ -6,7 +6,6 @@
   android:layout_marginBottom="8dp"
   android:layout_marginTop="8dp">
 
-
   <TextView
     android:id="@+id/list_item_genre_name"
     android:layout_width="match_parent"
@@ -22,6 +21,5 @@
     android:layout_gravity="center_vertical|end"
     android:layout_marginRight="@dimen/horizontal_margin"
     android:src="@drawable/ic_expand_more_black_24dp" />
-
 </FrameLayout>
 
