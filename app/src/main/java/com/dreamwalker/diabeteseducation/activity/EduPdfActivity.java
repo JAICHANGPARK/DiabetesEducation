@@ -1,28 +1,43 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
+import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.adapter.EduAdapter;
+import com.dreamwalker.diabeteseducation.model.Big;
+import com.dreamwalker.diabeteseducation.model.Child;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class EduPdfActivity extends AppCompatActivity {
 
     EduAdapter adapter;
-
+    Button btn_word_move;
     RecyclerView recyclerView;
 
     ArrayList<String> bigList = new ArrayList<>();
     ArrayList<String> childList = new ArrayList<>();
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_edu_pdf);
+
+        // 상태바 색 변경
+        View view = getWindow().getDecorView();
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -35,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
         adapter = new EduAdapter(this,makeGenres());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
     }
 
     private List<Big> makeGenres() {
@@ -151,10 +165,8 @@ public class MainActivity extends AppCompatActivity {
         Child child0 = new Child(getResources().getString(R.string.child_parent_70));
         Child child1 = new Child(getResources().getString(R.string.child_parent_71));
 
-
         return Arrays.asList(child0, child1);
     }
-
 
     private Big makeParentNine() {
         return new Big(getResources().getString(R.string.parent_8), makeChildNine());
