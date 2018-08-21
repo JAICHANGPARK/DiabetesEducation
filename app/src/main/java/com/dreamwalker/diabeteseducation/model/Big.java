@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.model;
 
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 

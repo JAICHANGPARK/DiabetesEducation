@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
+import com.dreamwalker.diabeteseducation.R;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.ArrayList;

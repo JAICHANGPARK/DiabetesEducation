@@ -1,18 +1,19 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.graphics.Color;
-import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.View;
-import android.widget.Toast;
+
+import com.dreamwalker.diabeteseducation.CustomDialog;
+import com.dreamwalker.diabeteseducation.MyDialogListener;
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.adapter.MyRecyclerAdapter;
+import com.dreamwalker.diabeteseducation.model.CardItem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,8 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
+
+import com.dreamwalker.diabeteseducation.R;
 
 public class MainActivity extends AppCompatActivity {
 

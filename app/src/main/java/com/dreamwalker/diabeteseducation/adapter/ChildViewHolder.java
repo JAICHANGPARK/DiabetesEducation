@@ -6,11 +6,14 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.adapter;
 
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.model.Child;
 
 public class ChildViewHolder extends com.thoughtbot.expandablerecyclerview.viewholders.ChildViewHolder {
     private static final String TAG = "ChildViewHolder";

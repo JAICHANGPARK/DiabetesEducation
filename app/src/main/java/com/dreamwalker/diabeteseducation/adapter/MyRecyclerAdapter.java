@@ -1,11 +1,13 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
+
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.model.CardItem;
 
 import java.util.List;
 

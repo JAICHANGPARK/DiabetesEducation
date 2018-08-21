@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -9,6 +9,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.adapter.EduAdapter;
+import com.dreamwalker.diabeteseducation.model.Big;
+import com.dreamwalker.diabeteseducation.model.Child;
 
 import java.util.ArrayList;
 import java.util.Arrays;
