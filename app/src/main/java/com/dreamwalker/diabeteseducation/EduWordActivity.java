@@ -26,6 +26,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
 
+
         // 상태바 색 변경
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
@@ -67,17 +68,18 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
 
+    // 클릭 이벤트
     @Override
     public void onItemClicked(int position) {
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        // 제목설정
+        // 제목 설정
         alertDialogBuilder.setTitle(title(position));
         alertDialogBuilder
                 .setMessage(content(position))
                 .setCancelable(false)
-                .setPositiveButton("종료", new DialogInterface.OnClickListener() {
+                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                // 프로그램을 종료한다
+                                // 확인 = 다이얼로그 종료
                             }
                         });
         AlertDialog alertDialog = alertDialogBuilder.create();
