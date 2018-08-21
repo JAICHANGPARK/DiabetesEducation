@@ -35,7 +35,6 @@ before_install:
   - yes | sdkmanager "platforms;android-28"
 
 script:
-   - chmod +x ./gradlew build connectedCheck
-   - ./gradlew build connectedCheck --stacktrace
+   - chmod +x ./gradlew build connectedCheck --stacktrace
    
 #   - bash config/travis/validate_fastlane_metadata.sh
