@@ -17,12 +17,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        // 툴바
-        Toolbar mytoolbar = (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(mytoolbar);
-        getSupportActionBar().setTitle("");
-
         Button action_word = (Button) findViewById(R.id.action_word);
         action_word.setOnClickListener(new View.OnClickListener() {
             @Override

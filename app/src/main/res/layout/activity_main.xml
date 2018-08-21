@@ -4,20 +4,6 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#ffc400"
-        android:elevation="4dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="EDUCATION"
-            android:textColor="#ff000000"
-            android:textSize="20dp" />
-    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical"
@@ -26,14 +12,15 @@
         <Button
             android:id="@+id/action_word"
             android:text="용어"
-            android:textSize="40dp"
+            android:textSize="40sp"
+            android:background="#a5d6a7"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
         <Button
             android:id="@+id/action_image"
             android:text="메뉴얼"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
