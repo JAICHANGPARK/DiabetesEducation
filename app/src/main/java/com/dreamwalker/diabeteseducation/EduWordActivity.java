@@ -3,9 +3,11 @@ package com.dreamwalker.diabeteseducation;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -54,11 +56,15 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         dataList.add(new CardItem(getResources().getString(R.string.parent_2_13)));
         dataList.add(new CardItem(getResources().getString(R.string.parent_2_14)));
 
-
         // 어댑터 설정
         mAdapter = new MyRecyclerAdapter(dataList);
         mAdapter.setOnClickListener(this);
         recyclerView.setAdapter(mAdapter);
+
+        // 구분선
+        // 이쁘면 메뉴얼쪽에도 추가하자
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(),new LinearLayoutManager(this).getOrientation());
+        recyclerView.addItemDecoration(dividerItemDecoration);
     }
 
     @Override
@@ -105,5 +111,5 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
                 getResources().getString(R.string.child_parent_2_14)
         };
         return str_content[position];
-        }
+    }
 }
