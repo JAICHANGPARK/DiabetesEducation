@@ -1,11 +1,14 @@
 package com.dreamwalker.diabeteseducation;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,13 +18,18 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     private static final String TAG = MainActivity.class.getSimpleName();
     private MyRecyclerAdapter mAdapter;
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
 
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        // 상태바 색 변경
+        View view = getWindow().getDecorView();
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
 
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(false);
 
         // 레이아웃 매니저로 LinearLayoutManager를 설정
