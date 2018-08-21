@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,15 +18,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button action_word = ( Button ) findViewById(R.id.action_word);
+        LinearLayout action_word = (LinearLayout) findViewById(R.id.action_word);
 
-        //
         // 상태바 색 변경
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
 
-        // 버튼 이벤트
+        // 레이아웃(버튼) 이벤트
         action_word.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button action_image = ( Button ) findViewById(R.id.action_image);
+        LinearLayout action_image = (LinearLayout) findViewById(R.id.action_image);
         action_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
