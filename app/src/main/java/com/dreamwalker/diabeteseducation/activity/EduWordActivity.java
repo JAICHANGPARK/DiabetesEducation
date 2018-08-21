@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -6,6 +6,10 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.adapter.MyRecyclerAdapter;
+import com.dreamwalker.diabeteseducation.model.CardItem;
 
 import java.util.ArrayList;
 import java.util.List;

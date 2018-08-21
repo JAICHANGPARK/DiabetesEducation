@@ -6,7 +6,7 @@
  * Vestibulum commodo. Ut rhoncus gravida arcu.
  */
 
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,6 +15,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.dreamwalker.diabeteseducation.activity.EduImageActivity;
+import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.model.Big;
+import com.dreamwalker.diabeteseducation.model.Child;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
 import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 

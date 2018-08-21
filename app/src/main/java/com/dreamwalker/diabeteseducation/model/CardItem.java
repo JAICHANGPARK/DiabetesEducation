@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.model;
 
 public class CardItem {
     private String contents;
