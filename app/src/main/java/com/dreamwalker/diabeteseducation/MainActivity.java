@@ -55,11 +55,6 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        // 툴바 탭 클릭 이벤트
-//        switch(item.getItemId()){
-//            case R.id.action_word:
-//                break;
-//        }
         return super.onOptionsItemSelected(item);
     }
 }
