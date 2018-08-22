@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activity.MainActivity">
     <item
-        android:id="@+id/action_extra"
-        android:title="추가"
+        android:id="@+id/action_appinfo"
+        android:title="앱정보"
         app:showAsAction="withText"/>
+    <item
+        android:id="@+id/action_myinfo"
+        android:title="개발자정보"
+        app:showAsAction="withText"/>
+
 </menu>

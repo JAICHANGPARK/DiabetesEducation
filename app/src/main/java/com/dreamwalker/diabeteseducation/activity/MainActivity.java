@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.dreamwalker.diabeteseducation.CustomDialog;
+import com.dreamwalker.diabeteseducation.MyDialogListener;
 import com.dreamwalker.diabeteseducation.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,7 +23,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LinearLayout action_word = (LinearLayout) findViewById(R.id.action_word);
+        LinearLayout action_word = ( LinearLayout ) findViewById(R.id.action_word);
+
+        // 툴바
+        Toolbar mytoolbar = ( Toolbar ) findViewById(R.id.my_toolbar);
+        setSupportActionBar(mytoolbar);
+        getSupportActionBar().setTitle("");
 
         // 상태바 색 변경
         View view = getWindow().getDecorView();
@@ -38,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LinearLayout action_image = (LinearLayout) findViewById(R.id.action_image);
+        LinearLayout action_image = ( LinearLayout ) findViewById(R.id.action_image);
         action_image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +65,36 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_appinfo:
+                // 앱정보 다이얼로그
+                CustomDialog dialog = new CustomDialog(this, "앱정보", "이거는 이러이러한 앱이다.");
+                dialog.setCanceledOnTouchOutside(true);
+
+                dialog.setDialogListener(new MyDialogListener() {
+                    @Override
+                    public void onPositiveClicked(String title, String content) {
+                    }
+                });
+                dialog.create();
+                dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+                dialog.show();
+                break;
+            case R.id.action_myinfo:
+                // 개발자정보 다이얼로그
+                CustomDialog dialog2 = new CustomDialog(this, "개발자정보", "나는 이러한 사람이다.");
+                dialog2.setCanceledOnTouchOutside(true);
+
+                dialog2.setDialogListener(new MyDialogListener() {
+                    @Override
+                    public void onPositiveClicked(String title, String content) {
+                    }
+                });
+                dialog2.create();
+                dialog2.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+                dialog2.show();
+                break;
+        }
+            return super.onOptionsItemSelected(item);
     }
 }
