@@ -34,7 +34,6 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         setContentView(R.layout.activity_edu_word);
 
 
-
         // 상태바 색 변경
         View view = getWindow().getDecorView();
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
