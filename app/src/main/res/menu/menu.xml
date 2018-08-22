@@ -10,5 +10,4 @@
         android:id="@+id/action_myinfo"
         android:title="@string/dialog_title2"
         app:showAsAction="withText"/>
-
 </menu>
