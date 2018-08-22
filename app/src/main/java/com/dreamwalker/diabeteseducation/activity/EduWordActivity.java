@@ -10,6 +10,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.dreamwalker.diabeteseducation.CustomDialog;
 import com.dreamwalker.diabeteseducation.MyDialogListener;
@@ -30,6 +32,8 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
+
+
 
         // 상태바 색 변경
         View view = getWindow().getDecorView();
@@ -75,14 +79,22 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     // 클릭 이벤트
     @Override
     public void onItemClicked(int position) {
+
         CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
         // 바깥 클릭 시 꺼짐
         dialog.setCanceledOnTouchOutside(true);
+
+
         dialog.setDialogListener(new MyDialogListener() {
             @Override
             public void onPositiveClicked(String title, String content) {
             }
         });
+        // 생성
+        dialog.create();
+        // 효과주고싶은데..
+        dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        // 쇼
         dialog.show();
     }
 
