@@ -67,14 +67,14 @@ public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, Chi
 
     @Override
     public void onBindChildViewHolder(final ChildViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
-        final Child artist = ((Big) group).getItems().get(childIndex);
+        final Child artist = (( Big ) group).getItems().get(childIndex);
         holder.setArtistName(artist.getName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 context.startActivity(new Intent(context, EduImageActivity.class));
 
-                Log.e(TAG, "onClick: " + artist.getName() );
+                Log.e(TAG, "onClick: " + artist.getName());
             }
         });
         //holder.binData(artist, listener);

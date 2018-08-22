@@ -3,11 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activity.MainActivity">
     <item
-        android:id="@+id/action_word"
-        android:title="용어"
-        app:showAsAction="withText"/>
-    <item
-        android:id="@+id/action_image"
-        android:title="PDF"
+        android:id="@+id/action_extra"
+        android:title="추가"
         app:showAsAction="withText"/>
 </menu>

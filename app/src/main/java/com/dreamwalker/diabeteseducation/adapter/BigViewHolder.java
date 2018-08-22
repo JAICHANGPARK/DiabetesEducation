@@ -27,8 +27,8 @@ public class BigViewHolder extends GroupViewHolder {
     public BigViewHolder(View itemView) {
         super(itemView);
 
-        genreName = (TextView) itemView.findViewById(R.id.list_item_genre_name);
-        arrow = (ImageView) itemView.findViewById(R.id.list_item_genre_arrow);
+        genreName = ( TextView ) itemView.findViewById(R.id.list_item_genre_name);
+        arrow = ( ImageView ) itemView.findViewById(R.id.list_item_genre_arrow);
     }
 
     @Override
@@ -42,7 +42,7 @@ public class BigViewHolder extends GroupViewHolder {
         animateCollapse();
     }
 
-    private void animationExpand(){
+    private void animationExpand() {
         RotateAnimation rotate = new RotateAnimation(360, 180, RELATIVE_TO_SELF, 0.5f, RELATIVE_TO_SELF, 0.5f);
         rotate.setDuration(300);
         rotate.setFillAfter(true);

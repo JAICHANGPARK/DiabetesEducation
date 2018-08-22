@@ -10,6 +10,8 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import com.dreamwalker.diabeteseducation.CustomDialog;
 import com.dreamwalker.diabeteseducation.MyDialogListener;
@@ -30,6 +32,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
+
 
         // 상태바 색 변경
         View view = getWindow().getDecorView();
@@ -71,78 +74,28 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), new LinearLayoutManager(this).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
-/*
-    // 클릭 이벤트
-    @Override
-    public void onItemClicked(int position) {
-        final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        // 제목 설정
-        alertDialogBuilder.setTitle(title(position));
-        alertDialogBuilder
-                .setMessage(content(position))
-                .setCancelable(false)
-                .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                // 확인 = 다이얼로그 종료
-                            }
-                        });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-        }
-
-        String title(int position){
-        String[] str_title = {getResources().getString(R.string.parent_2_0), getResources().getString(R.string.parent_2_1), getResources().getString(R.string.parent_2_2), getResources().getString(R.string.parent_2_3),
-                getResources().getString(R.string.parent_2_4), getResources().getString(R.string.parent_2_5), getResources().getString(R.string.parent_2_6), getResources().getString(R.string.parent_2_7),
-                getResources().getString(R.string.parent_2_8), getResources().getString(R.string.parent_2_9), getResources().getString(R.string.parent_2_10), getResources().getString(R.string.parent_2_11),
-                getResources().getString(R.string.parent_2_12), getResources().getString(R.string.parent_2_13), getResources().getString(R.string.parent_2_14)};
-        return str_title[position];
-        }
-
-        String content(int position){
-        String[] str_content = new String[]{
-                getResources().getString(R.string.child_parent_2_00),
-                getResources().getString(R.string.child_parent_2_01),
-                getResources().getString(R.string.child_parent_2_02),
-                getResources().getString(R.string.child_parent_2_03),
-                getResources().getString(R.string.child_parent_2_04),
-                getResources().getString(R.string.child_parent_2_05),
-                getResources().getString(R.string.child_parent_2_06),
-                getResources().getString(R.string.child_parent_2_07),
-                getResources().getString(R.string.child_parent_2_08),
-                getResources().getString(R.string.child_parent_2_09),
-                getResources().getString(R.string.child_parent_2_10),
-                getResources().getString(R.string.child_parent_2_11),
-                getResources().getString(R.string.child_parent_2_12),
-                getResources().getString(R.string.child_parent_2_13),
-                getResources().getString(R.string.child_parent_2_14)
-        };
-        return str_content[position];
-    }
-    */
 
     // 클릭 이벤트
     @Override
     public void onItemClicked(int position) {
 
-        CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position)); // 왼쪽 버튼 이벤트
+        CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
+        // 바깥 클릭 시 꺼짐
+        dialog.setCanceledOnTouchOutside(true);
+
 
         dialog.setDialogListener(new MyDialogListener() {
             @Override
             public void onPositiveClicked(String title, String content) {
             }
-
-            @Override
-            public void onNegativeClicked() {
-            }
         });
+        // 생성
+        dialog.create();
+        // 효과주고싶은데..
+        dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
+        // 쇼
         dialog.show();
     }
-
-    private View.OnClickListener leftListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            //
-        }
-    };
 
     String title(int position) {
         String[] str_title = {getResources().getString(R.string.parent_2_0), getResources().getString(R.string.parent_2_1), getResources().getString(R.string.parent_2_2), getResources().getString(R.string.parent_2_3),
