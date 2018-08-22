@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
-        <shape >
-            <solid android:color="#f47526"/>
-            <stroke android:width="2dp" android:color="#000000"/>
-            <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp"/>
+        <shape>
+            <solid android:color="#747372" />
+            <stroke android:width="2dp" android:color="#000000" />
+            <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp" />
         </shape>
     </item>
     <item android:state_pressed="false">
-        <shape >
-            <solid android:color="#fcdb00"/>
-            <stroke android:width="2dp" android:color="#ffffff"/>
-            <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp"/>
+        <shape>
+            <gradient android:angle="90" android:endColor="#efb3f4" android:startColor="#c7a1f2" />
+            <stroke android:width="2dp" android:color="#ffffff" />
+            <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp" />
         </shape>
     </item>
 </selector>

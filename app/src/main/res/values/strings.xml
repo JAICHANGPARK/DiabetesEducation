@@ -79,7 +79,7 @@
     <string name="child_parent_2_00"> 혈액 속의 포도당 수치가 정상인보다\n높아 몸에서 포도당이 소변으로\n배출됩니다. </string>
     <string name="child_parent_2_01"> 8시간 이상 칼로리 섭취를 하지 않고\n정맥에서 채혈해서 뽑은 혈액입니다. </string>
     <string name="child_parent_2_02"> 혈당이 70mg/dL 이하로 내려가는\n경우를 말하며,\n대개 관련 증상이 있습니다. </string>
-    <string name="child_parent_2_03"> 혈당이 증가되어 적혈구에 있는\n 혈색소에 포도당이 붙은 상태를 말한다.\n지난 2-3개월간의 평균 혈당 농도를\n정확히 파악할 수 있는 측정 수치이다. </string>
+    <string name="child_parent_2_03"> 혈당이 증가되어 적혈구에 있는\n혈색소에 포도당이 붙은 상태를 말한다.\n지난 2-3개월간의 평균 혈당 농도를\n정확히 파악할 수 있는 측정 수치이다. </string>
     <string name="child_parent_2_04"> 당뇨병의 병인, 증상 및 질병 조절을\n위한 처방 지침에 대한 환자의\n지식의 정도를 의미한다. </string>
     <string name="child_parent_2_05"> 성숙되어 가는 개인 자신의 생명과\n건강한 기능 상태를 유지하고\n개인적 발전을 이루기 위하여 시작하고\n수행하는 행위를 의미한다. </string>
     <string name="child_parent_2_06"> 스스로 식이나 운동 등 생활 습관을\n관리하고 혈당을 모니터링하는\n자기관리를 실천하는 것을 의미힌다. </string>
@@ -93,7 +93,7 @@
     <string name="child_parent_2_14"> 혈압이 정상치보다 높은 경우입니다. </string>
 
     <string name="oops1"> EDUCATION </string>
-    <string name="oops2"> 용어 </string>
+    <string name="oops2"> 용 어 </string>
     <string name="oops3"> 메뉴얼 </string>
     <string name="oops4"> 확인 </string>
 </resources>
