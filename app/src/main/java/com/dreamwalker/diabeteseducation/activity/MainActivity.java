@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_appinfo:
                 // 앱정보 다이얼로그
-                CustomDialog dialog = new CustomDialog(this, "앱정보", "이거는 이러이러한 앱이다.");
+                CustomDialog dialog = new CustomDialog(this, getResources().getString(R.string.dialog_title), getResources().getString(R.string.dialog_content));
                 dialog.setCanceledOnTouchOutside(true);
 
                 dialog.setDialogListener(new MyDialogListener() {
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.action_myinfo:
                 // 개발자정보 다이얼로그
-                CustomDialog dialog2 = new CustomDialog(this, "개발자정보", "나는 이러한 사람이다.");
+                CustomDialog dialog2 = new CustomDialog(this, getResources().getString(R.string.dialog_title2), getResources().getString(R.string.dialog_content2));
                 dialog2.setCanceledOnTouchOutside(true);
 
                 dialog2.setDialogListener(new MyDialogListener() {
