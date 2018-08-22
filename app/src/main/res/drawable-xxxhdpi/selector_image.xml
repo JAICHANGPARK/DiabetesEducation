@@ -15,7 +15,7 @@
     <!-- 클릭X 경우 -->
     <item android:state_pressed="false">
         <shape >
-            <solid android:color="#36cbf4"/>
+            <solid android:color="#00ffee"/>
             <stroke android:width="2dp" android:color="#ffffff"/>
             <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp"/>
         </shape>
