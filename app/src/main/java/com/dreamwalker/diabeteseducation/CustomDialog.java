@@ -39,7 +39,7 @@ public class CustomDialog extends Dialog {
         text_title.setText(title);
         text_content.setText(content);
 
-        // 확인 버튼 = 종료
+        // 종료 버튼
         Button ok_btn = (Button) findViewById(R.id.ok_btn);
         ok_btn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -76,6 +76,8 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     @Override
     public void onItemClicked(int position) {
         CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
+        // 바깥 클릭 시 꺼짐
+        dialog.setCanceledOnTouchOutside(true);
         dialog.setDialogListener(new MyDialogListener() {
             @Override
             public void onPositiveClicked(String title, String content) {
