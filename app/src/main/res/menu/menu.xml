@@ -1,15 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:icon="@drawable/ic_more_vert_white_24dp"
     tools:context=".activity.MainActivity">
     <item
         android:id="@+id/action_appinfo"
-        android:title="앱정보"
+        android:title="@string/dialog_title"
         app:showAsAction="withText"/>
     <item
         android:id="@+id/action_myinfo"
-        android:title="개발자정보"
+        android:title="@string/dialog_title2"
         app:showAsAction="withText"/>
 
 </menu>
