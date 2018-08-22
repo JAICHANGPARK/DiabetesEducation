@@ -19,7 +19,6 @@ import java.util.List;
 public class EduPdfActivity extends AppCompatActivity {
 
     EduAdapter adapter;
-    Button btn_word_move;
     RecyclerView recyclerView;
 
     ArrayList<String> bigList = new ArrayList<>();
