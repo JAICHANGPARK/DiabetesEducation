@@ -96,4 +96,9 @@
     <string name="oops2"> 용 어 </string>
     <string name="oops3"> 메뉴얼 </string>
     <string name="oops4"> 확인 </string>
+
+    <string name="dialog_title"> 앱정보 </string>
+    <string name="dialog_content"> 문해력이 낮은 어르신들을 위한 교육용 앱으로, 이해하기 쉽게 제작하였습니다.\n------도움주신분들------\nMANUAL액티비티 제작자 : 박제창\n자바+안드로이드를 다루는 기술\n안드로이드 앱 프로그래밍\n다이얼로그 소스 참고 : 키위남블로그\n리사이클러뷰 소스 참고 : 김정현의 안드로이드 코딩 여행기 블로그\n등등 도움주신 여러분들 감사합니다. </string>
+    <string name="dialog_title2"> 개발자정보 </string>
+    <string name="dialog_content2"> 평범한 대학교 전자공학 4학년 양지훈입니다.\n잘 부탁드리겠습니다. </string>
 </resources>
