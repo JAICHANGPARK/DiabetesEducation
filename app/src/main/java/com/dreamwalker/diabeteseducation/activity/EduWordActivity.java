@@ -1,17 +1,11 @@
 package com.dreamwalker.diabeteseducation.activity;
 
 import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.dreamwalker.diabeteseducation.CustomDialog;
 import com.dreamwalker.diabeteseducation.MyDialogListener;
@@ -73,7 +67,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     @Override
     public void onItemClicked(int position) {
 
-        CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
+        CustomDialog dialog = new CustomDialog(EduWordActivity.this);
         // 바깥 클릭 시 꺼짐
         dialog.setCanceledOnTouchOutside(true);
 

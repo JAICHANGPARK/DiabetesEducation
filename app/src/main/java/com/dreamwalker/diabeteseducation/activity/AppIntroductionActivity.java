@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.dreamwalker.diabeteseducation.CustomDialog;
+import com.dreamwalker.diabeteseducation.Introduction.ChangeLogActivity;
+import com.dreamwalker.diabeteseducation.Introduction.DevelopActivity;
+import com.dreamwalker.diabeteseducation.Introduction.IntroActivity;
 import com.dreamwalker.diabeteseducation.MyDialogListener;
 import com.dreamwalker.diabeteseducation.R;
 
@@ -50,7 +53,7 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
                 dialog.setCanceledOnTouchOutside(true);
                 dialog.setDialogListener(new MyDialogListener() {
                     @Override
-                    public void onPositiveClicked() {
+                    public void onPositiveClicked(String title, String content) {
                     }
                 });
                 dialog.create();
@@ -71,6 +74,4 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
                 break;
         }
     }
-}
-
 }
