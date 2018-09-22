@@ -1,13 +1,12 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.dreamwalker.diabeteseducation.activity.MainActivity;
+import com.dreamwalker.diabeteseducation.R;
 
 // 인트로 : 2초 대기화면
 public class Intro extends Activity {

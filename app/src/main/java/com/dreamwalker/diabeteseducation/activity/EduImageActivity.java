@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 public class EduImageActivity extends AppCompatActivity {
 
+    ImageView imageView;
     RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
     ArrayList<Integer> imageList;
@@ -42,5 +43,7 @@ public class EduImageActivity extends AppCompatActivity {
 
         adapter = new EduImageAdapter(this, imageList);
         recyclerView.setAdapter(adapter);
+//        imageView = findViewById(R.id.image_view);
+//        Glide.with(this).load(R.drawable.image_education_00).into(imageView);
     }
 }

@@ -25,7 +25,6 @@ public class ChildViewHolder extends com.thoughtbot.expandablerecyclerview.viewh
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Log.e(TAG, "onClick: +clicked " + childTextView.getText().toString());
             }
         });
