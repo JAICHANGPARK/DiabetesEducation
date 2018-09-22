@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.dreamwalker.diabeteseducation.introduction.ChangeLogActivity;
 import com.dreamwalker.diabeteseducation.introduction.DevelopActivity;
 import com.dreamwalker.diabeteseducation.introduction.IntroActivity;
@@ -32,14 +31,13 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
         menu4.setOnClickListener(this);
     }
 
-    // 메뉴 4개(텍스트뷰) 클릭 이벤트
+    // 클릭 이벤트
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.menu1:
                 // 1번 메뉴 : 당뇨그루에 대해
-                // 액티비티 넘겨
-                Intent IntroIntent = new Intent(AppIntroductionActivity.this, IntroActivity.class);
-                startActivity(IntroIntent);
+                Intent Intro_Intent = new Intent(AppIntroductionActivity.this, IntroActivity.class);
+                startActivity(Intro_Intent);
                 break;
             case R.id.menu2:
                 // 2번 메뉴 : 앱버전 정보
@@ -47,7 +45,6 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
                 break;
             case R.id.menu3:
                 // 3번 메뉴 : 개발자 정보
-                // 리사이클러뷰
                 // 뷰홀더 형식을 생각하자!
                 Intent developer_Intent = new Intent(AppIntroductionActivity.this, DevelopActivity.class);
                 startActivity(developer_Intent);
