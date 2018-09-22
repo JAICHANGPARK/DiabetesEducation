@@ -1,7 +1,4 @@
-package com.dreamwalker.diabeteseducation.Introduction;
-
-import android.media.Image;
-import android.widget.ImageView;
+package com.dreamwalker.diabeteseducation.introduction;
 
 public class CardItem {
     //    private int image;

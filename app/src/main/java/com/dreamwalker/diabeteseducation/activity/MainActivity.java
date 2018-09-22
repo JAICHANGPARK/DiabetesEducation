@@ -37,10 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // 객체 생성
     public void set() {
         Button action_word = (Button) findViewById(R.id.action_word);
-        action_word.setOnClickListener(this);
         Button action_image = (Button) findViewById(R.id.action_image);
-        action_image.setOnClickListener(this);
         Button action_introduction = (Button) findViewById(R.id.action_introduction);
+        action_word.setOnClickListener(this);
+        action_image.setOnClickListener(this);
         action_introduction.setOnClickListener(this);
     }
 

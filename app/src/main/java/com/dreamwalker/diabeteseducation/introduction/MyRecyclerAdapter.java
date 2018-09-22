@@ -1,7 +1,6 @@
-package com.dreamwalker.diabeteseducation.Introduction;
+package com.dreamwalker.diabeteseducation.introduction;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -69,9 +68,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
     @Override
     public int getItemCount() {
         return mDataList.size();
-    }
-
-    public void setOnClickListener(DialogInterface.OnClickListener onClickListener) {
     }
 
     // 각각의 아이템의 레퍼런스를 저장할 뷰 홀더 클래스

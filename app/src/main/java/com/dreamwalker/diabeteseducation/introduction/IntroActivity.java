@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.Introduction;
+package com.dreamwalker.diabeteseducation.introduction;
 
 import android.annotation.TargetApi;
 import android.os.Build;

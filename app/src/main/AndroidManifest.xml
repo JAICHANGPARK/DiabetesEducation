@@ -21,9 +21,9 @@
         <activity android:name=".activity.EduWordActivity" />
         <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.AppIntroductionActivity"/>
-        <activity android:name=".Introduction.ChangeLogActivity"/>
-        <activity android:name=".Introduction.DevelopActivity"/>
-        <activity android:name=".Introduction.IntroActivity"/>
+        <activity android:name=".introduction.ChangeLogActivity"/>
+        <activity android:name=".introduction.DevelopActivity"/>
+        <activity android:name=".introduction.IntroActivity"/>
     </application>
 
 </manifest>

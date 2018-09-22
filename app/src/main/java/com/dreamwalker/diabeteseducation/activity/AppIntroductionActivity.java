@@ -1,20 +1,15 @@
 package com.dreamwalker.diabeteseducation.activity;
 
-import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.dreamwalker.diabeteseducation.CustomDialog;
-import com.dreamwalker.diabeteseducation.Introduction.ChangeLogActivity;
-import com.dreamwalker.diabeteseducation.Introduction.DevelopActivity;
-import com.dreamwalker.diabeteseducation.Introduction.IntroActivity;
-import com.dreamwalker.diabeteseducation.MyDialogListener;
+import com.dreamwalker.diabeteseducation.introduction.ChangeLogActivity;
+import com.dreamwalker.diabeteseducation.introduction.DevelopActivity;
+import com.dreamwalker.diabeteseducation.introduction.IntroActivity;
 import com.dreamwalker.diabeteseducation.R;
 
 public class AppIntroductionActivity extends AppCompatActivity implements View.OnClickListener {
@@ -48,16 +43,7 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
                 break;
             case R.id.menu2:
                 // 2번 메뉴 : 앱버전 정보
-                // 커스텀 다이얼로그
-                CustomDialog dialog = new CustomDialog(AppIntroductionActivity.this);
-                dialog.setCanceledOnTouchOutside(true);
-                dialog.setDialogListener(new MyDialogListener() {
-                    @Override
-                    public void onPositiveClicked(String title, String content) {
-                    }
-                });
-                dialog.create();
-                dialog.show();
+                Toast.makeText(getApplicationContext(), "커스텀 다이얼로그 추가 예정", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.menu3:
                 // 3번 메뉴 : 개발자 정보
