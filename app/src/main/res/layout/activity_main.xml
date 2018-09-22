@@ -25,20 +25,26 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="앱 소개" />
+        android:text="앱 소개"
+        android:textStyle="normal"
+        android:fontFamily="@font/my_font_family" />
 
     <Button
         android:id="@+id/action_word"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:text="용어" />
+        android:text="용어"
+        android:textStyle="normal"
+        android:fontFamily="@font/my_font_family" />
 
     <Button
         android:id="@+id/action_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="3"
-        android:text="메뉴얼" />
+        android:text="메뉴얼"
+        android:textStyle="normal"
+        android:fontFamily="@font/my_font_family" />
 
 </LinearLayout>
