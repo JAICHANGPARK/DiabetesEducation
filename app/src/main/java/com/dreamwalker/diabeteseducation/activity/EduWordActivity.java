@@ -1,11 +1,13 @@
 package com.dreamwalker.diabeteseducation.activity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.dreamwalker.diabeteseducation.CustomDialog;
 import com.dreamwalker.diabeteseducation.MyDialogListener;
@@ -17,17 +19,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdapter.MyRecyclerViewClickListener {
-
-    private static final String TAG = MainActivity.class.getSimpleName();
     private MyRecyclerAdapter mAdapter;
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
 
-        RecyclerView recyclerView = ( RecyclerView ) findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(false);
 
         // 레이아웃 매니저로 LinearLayoutManager를 설정
@@ -58,7 +57,6 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         recyclerView.setAdapter(mAdapter);
 
         // 구분선
-        // 이쁘면 메뉴얼쪽에도 추가하자
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), new LinearLayoutManager(this).getOrientation());
         recyclerView.addItemDecoration(dividerItemDecoration);
     }
@@ -67,11 +65,9 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
     @Override
     public void onItemClicked(int position) {
 
-        CustomDialog dialog = new CustomDialog(EduWordActivity.this);
+        CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
         // 바깥 클릭 시 꺼짐
         dialog.setCanceledOnTouchOutside(true);
-
-
         dialog.setDialogListener(new MyDialogListener() {
             @Override
             public void onPositiveClicked(String title, String content) {
@@ -79,7 +75,6 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         });
         // 생성
         dialog.create();
-        // 효과주고싶은데..
         dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
         // 쇼
         dialog.show();
