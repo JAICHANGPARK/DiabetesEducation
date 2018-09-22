@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="6dp"
-        android:layout_marginTop="?attr/actionBarSize"
         android:orientation="vertical"
         android:weightSum="4">
 
@@ -20,8 +19,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu1"
-            android:textSize="20sp" />
+            android:text="@string/menu1" />
 
         <TextView
             android:id="@+id/menu2"
@@ -29,8 +27,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu2"
-            android:textSize="20sp" />
+            android:text="@string/menu2" />
 
         <TextView
             android:id="@+id/menu3"
@@ -38,8 +35,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu3"
-            android:textSize="20sp" />
+            android:text="@string/menu3" />
 
         <TextView
             android:id="@+id/menu4"
@@ -47,8 +43,6 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu4"
-            android:textSize="20sp" />
+            android:text="@string/menu4" />
     </LinearLayout>
-
 </RelativeLayout>

@@ -16,81 +16,22 @@ import com.dreamwalker.diabeteseducation.R;
 
 import java.util.ArrayList;
 
-public class IntroActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class IntroActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
 
     // TODO 확장형 리스트뷰 :사이즈 조절, 내용 추가
     // TODO 스크롤뷰 : 처음 열면 맨 위로 올라오도록!
 
-    ScrollView scrollview;
-    TextView index_no1, index_no2_1, index_no2_2, index_no2_3, index_no2_4, index_no2_5;
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
-
-        scrollview = (ScrollView) findViewById(R.id.scrollview);
-        scrollview.smoothScrollTo(0, 0);
-        // 맨 끝까지 스크롤 시키기
-        scrollview.fullScroll(ScrollView.FOCUS_DOWN);
-        // 수평 스크롤바 사용 가능 설정
-        // 안넣어도
-        scrollview.setHorizontalScrollBarEnabled(true);
-//        scrollview.setNestedScrollingEnabled(false);
-
-        index_no1 = (TextView) findViewById(R.id.index_no1);
-        index_no2_1 = (TextView) findViewById(R.id.index_no2_1);
-        index_no2_2 = (TextView) findViewById(R.id.index_no2_2);
-        index_no2_3 = (TextView) findViewById(R.id.index_no2_3);
-        index_no2_4 = (TextView) findViewById(R.id.index_no2_4);
-        index_no2_5 = (TextView) findViewById(R.id.index_no2_5);
-
-        index_no2_1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "띠용21", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        index_no2_2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "띠용22", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        index_no2_3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "띠용23", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        index_no2_4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "띠용24", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        index_no2_5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "띠용25", Toast.LENGTH_LONG).show();
-            }
-        });
-
-
+        set_scroll();
+        set();
         ExpandableListView elv = (ExpandableListView) findViewById(R.id.elv);
-
         final ArrayList<Index> index = getData();
-
         //create and bind to adatper
         MyAdapter adapter = new MyAdapter(this, index);
         elv.setAdapter(adapter);
-
         //set onclick listener
         elv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
             @Override
@@ -99,6 +40,32 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
                 return false;
             }
         });
+    }
+
+    // 스크롤뷰 설정
+    public void set_scroll(){
+        ScrollView scrollview = (ScrollView) findViewById(R.id.scrollview);
+        scrollview.smoothScrollTo(0, 0);
+        // 맨 끝까지 스크롤 시키기
+        scrollview.fullScroll(ScrollView.FOCUS_DOWN);
+        // 수평 스크롤바 사용 가능 설정
+        scrollview.setHorizontalScrollBarEnabled(true);
+    }
+
+    // 객체 생성
+    public void set(){
+        TextView index_no1 = (TextView) findViewById(R.id.index_no1);
+        TextView index_no2_1 = (TextView) findViewById(R.id.index_no2_1);
+        TextView index_no2_2 = (TextView) findViewById(R.id.index_no2_2);
+        TextView index_no2_3 = (TextView) findViewById(R.id.index_no2_3);
+        TextView index_no2_4 = (TextView) findViewById(R.id.index_no2_4);
+        TextView index_no2_5 = (TextView) findViewById(R.id.index_no2_5);
+        index_no1.setOnClickListener(this);
+        index_no2_1.setOnClickListener(this);
+        index_no2_2.setOnClickListener(this);
+        index_no2_3.setOnClickListener(this);
+        index_no2_4.setOnClickListener(this);
+        index_no2_5.setOnClickListener(this);
     }
 
     //add and get data for list
@@ -138,5 +105,10 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }
