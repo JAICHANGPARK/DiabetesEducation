@@ -37,13 +37,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         action_introduction.setOnClickListener(this);
     }
 
-    // 메뉴
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
     // 클릭이벤트
     @Override
     public void onClick(View v) {
