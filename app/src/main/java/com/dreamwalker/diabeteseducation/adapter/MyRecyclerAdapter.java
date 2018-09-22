@@ -61,7 +61,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            contents = (TextView) itemView.findViewById(R.id.title_text);
+            contents = ( TextView ) itemView.findViewById(R.id.title_text);
         }
     }
 

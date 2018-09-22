@@ -7,10 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-/**
- * Created by charlie on 2017. 8. 18..
- */
-
 public class CustomDialog extends Dialog {
 
     private MyDialogListener dialogListener;
@@ -21,14 +17,14 @@ public class CustomDialog extends Dialog {
     private String title;
     private String content;
 
-    public CustomDialog(Context context,String title, String content){
+    public CustomDialog(Context context, String title, String content) {
         super(context);
         this.context = context;
         this.title = title;
         this.content = content;
     }
 
-    public void setDialogListener(MyDialogListener dialogListener){
+    public void setDialogListener(MyDialogListener dialogListener) {
         this.dialogListener = dialogListener;
     }
 
@@ -37,14 +33,14 @@ public class CustomDialog extends Dialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_custom);
 
-        text_title = (TextView) findViewById(R.id.text_title);
-        text_content = (TextView) findViewById(R.id.text_content);
+        text_title = ( TextView ) findViewById(R.id.text_title);
+        text_content = ( TextView ) findViewById(R.id.text_content);
 
         text_title.setText(title);
         text_content.setText(content);
 
-        Button ok_btn = (Button) findViewById(R.id.ok_btn);
-
+        // 종료 버튼
+        Button ok_btn = ( Button ) findViewById(R.id.ok_btn);
         ok_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

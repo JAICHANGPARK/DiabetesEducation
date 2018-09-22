@@ -6,58 +6,70 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.dreamwalker.diabeteseducation.CustomDialog;
+import com.dreamwalker.diabeteseducation.MyDialogListener;
 import com.dreamwalker.diabeteseducation.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LinearLayout action_word = (LinearLayout) findViewById(R.id.action_word);
-
-        // 상태바 색 변경
-        View view = getWindow().getDecorView();
-        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
-
-        // 레이아웃(버튼) 이벤트
-        action_word.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 교육(추가자료) 페이지로 이동
-                Intent intent_edu = new Intent(MainActivity.this, EduWordActivity.class);
-                startActivity(intent_edu);
-            }
-        });
-
-        LinearLayout action_image = (LinearLayout) findViewById(R.id.action_image);
-        action_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 설정 페이지로 이동
-                Intent intent = new Intent(MainActivity.this, EduPdfActivity.class);
-                startActivity(intent);
-            }
-        });
+        setToolbar();
+        set();
     }
 
-    // 메뉴.xml
+    // 툴바
+    public void setToolbar() {
+        Toolbar mytoolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(mytoolbar);
+        getSupportActionBar().setTitle("");
+    }
+
+    // 객체 생성
+    public void set() {
+        Button action_word = (Button) findViewById(R.id.action_word);
+        action_word.setOnClickListener(this);
+        Button action_image = (Button) findViewById(R.id.action_image);
+        action_image.setOnClickListener(this);
+        Button action_introduction = (Button) findViewById(R.id.action_introduction);
+        action_introduction.setOnClickListener(this);
+    }
+
+    // 메뉴
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu, menu);
         return true;
     }
 
+    // 클릭이벤트
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        return super.onOptionsItemSelected(item);
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.action_introduction:
+                // 앱 소개 페이지로 이동
+                Intent action_introduction = new Intent(MainActivity.this, AppIntroductionActivity.class);
+                startActivity(action_introduction);
+                break;
+            case R.id.action_word:
+                // 용어 페이지로 이동
+                Intent intent_word = new Intent(MainActivity.this, EduWordActivity.class);
+                startActivity(intent_word);
+                break;
+            case R.id.action_image:
+                // 메뉴얼 페이지로 이동
+                Intent intent_image = new Intent(MainActivity.this, EduPdfActivity.class);
+                startActivity(intent_image);
+                break;
+        }
     }
 }

@@ -20,37 +20,25 @@
             android:textSize="20sp" />
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
+    <Button
+        android:id="@+id/action_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="앱 소개" />
+
+    <Button
         android:id="@+id/action_word"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/selector_image"
-        android:orientation="horizontal">
+        android:layout_weight="3"
+        android:text="용어" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/oops2"
-            android:textSize="40sp"/>
-    </LinearLayout>
-
-    <LinearLayout
+    <Button
         android:id="@+id/action_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/selector_image2"
-        android:orientation="horizontal">
+        android:layout_weight="3"
+        android:text="메뉴얼" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:text="@string/oops3"
-            android:textSize="40sp"/>
-    </LinearLayout>
 </LinearLayout>

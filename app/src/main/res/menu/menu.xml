@@ -3,11 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".activity.MainActivity">
     <item
-        android:id="@+id/action_word"
-        android:title="용어"
+        android:id="@+id/action_appinfo"
+        android:title="@string/dialog_title"
         app:showAsAction="withText"/>
     <item
-        android:id="@+id/action_image"
-        android:title="PDF"
+        android:id="@+id/action_myinfo"
+        android:title="@string/dialog_title2"
         app:showAsAction="withText"/>
 </menu>

@@ -1,10 +1,12 @@
 package com.dreamwalker.diabeteseducation.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Button;
 
 import com.dreamwalker.diabeteseducation.R;
@@ -19,26 +21,24 @@ import java.util.List;
 public class EduPdfActivity extends AppCompatActivity {
 
     EduAdapter adapter;
-    Button btn_word_move;
     RecyclerView recyclerView;
 
     ArrayList<String> bigList = new ArrayList<>();
     ArrayList<String> childList = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_pdf);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = ( RecyclerView ) findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         RecyclerView.ItemAnimator animator = recyclerView.getItemAnimator();
         if (animator instanceof DefaultItemAnimator) {
-            ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
+            (( DefaultItemAnimator ) animator).setSupportsChangeAnimations(false);
         }
 
-        adapter = new EduAdapter(this,makeGenres());
+        adapter = new EduAdapter(this, makeGenres());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
     }
@@ -152,6 +152,7 @@ public class EduPdfActivity extends AppCompatActivity {
     private Big makeParentEight() {
         return new Big(getResources().getString(R.string.parent_7), makeChildEight());
     }
+
     private List<Child> makeChildEight() {
         Child child0 = new Child(getResources().getString(R.string.child_parent_70));
         Child child1 = new Child(getResources().getString(R.string.child_parent_71));
@@ -162,6 +163,7 @@ public class EduPdfActivity extends AppCompatActivity {
     private Big makeParentNine() {
         return new Big(getResources().getString(R.string.parent_8), makeChildNine());
     }
+
     private List<Child> makeChildNine() {
         Child child0 = new Child(getResources().getString(R.string.child_parent_80));
         Child child1 = new Child(getResources().getString(R.string.child_parent_81));

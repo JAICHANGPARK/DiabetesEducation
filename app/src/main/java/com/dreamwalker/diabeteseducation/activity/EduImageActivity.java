@@ -21,28 +21,26 @@ import java.util.ArrayList;
 
 public class EduImageActivity extends AppCompatActivity {
 
-    ImageView imageView;
     RecyclerView recyclerView;
     LinearLayoutManager linearLayoutManager;
     ArrayList<Integer> imageList;
     EduImageAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_image);
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        linearLayoutManager  = new LinearLayoutManager(this);
+        linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        imageList  = new ArrayList<>();
+        imageList = new ArrayList<>();
 
         imageList.add(R.drawable.image_education_00);
         imageList.add(R.drawable.image_education_01);
 
         adapter = new EduImageAdapter(this, imageList);
         recyclerView.setAdapter(adapter);
-//        imageView = findViewById(R.id.image_view);
-//        Glide.with(this).load(R.drawable.image_education_00).into(imageView);
     }
 }
