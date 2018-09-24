@@ -19,7 +19,7 @@
             android:text="목차"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -29,7 +29,7 @@
             android:text="1. 당뇨그루에 관해"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -38,7 +38,7 @@
             android:text="2. 당뇨그루"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -48,7 +48,7 @@
             android:text="2-1. 식이요법관리"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -58,7 +58,7 @@
             android:text="2-2. 운동관리"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -68,7 +68,7 @@
             android:text="2-3. 투약"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -78,7 +78,7 @@
             android:text="2-4. 신체활동"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <TextView
@@ -88,7 +88,7 @@
             android:text="2-5. 혈당계"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
 
         <!--목차 끝-->
@@ -103,17 +103,17 @@
             android:text="내용 시작"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
         <!--내용 시작-->
         <ExpandableListView
             android:id="@+id/elv"
             android:layout_width="match_parent"
-            android:layout_height="800dp"
+            android:layout_height="1500dp"
             android:groupIndicator="@null"
             android:fontFamily="@font/my_font_family"
             android:textStyle="normal"
-            android:textSize="10sp"
+            android:textSize="20sp"
             android:textColor="#000000"/>
     </LinearLayout>
 </ScrollView>
