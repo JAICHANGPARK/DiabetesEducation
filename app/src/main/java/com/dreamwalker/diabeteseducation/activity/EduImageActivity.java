@@ -20,6 +20,7 @@ import com.dreamwalker.diabeteseducation.adapter.EduImageAdapter;
 import java.util.ArrayList;
 
 public class EduImageActivity extends AppCompatActivity {
+//    TODO 이미지 어댑터 수정
 
     ImageView imageView;
     RecyclerView recyclerView;

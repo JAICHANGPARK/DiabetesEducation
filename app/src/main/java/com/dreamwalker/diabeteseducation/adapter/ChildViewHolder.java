@@ -21,7 +21,7 @@ public class ChildViewHolder extends com.thoughtbot.expandablerecyclerview.viewh
 
     public ChildViewHolder(View itemView) {
         super(itemView);
-        childTextView = ( TextView ) itemView.findViewById(R.id.list_item_artist_name);
+        childTextView = (TextView) itemView.findViewById(R.id.list_item_artist_name);
         itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

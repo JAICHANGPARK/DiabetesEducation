@@ -16,80 +16,80 @@
             android:id="@+id/index"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="목차"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="목차"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1. 당뇨그루에 관해"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="1. 당뇨그루에 관해"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2. 당뇨그루"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2. 당뇨그루"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no2_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2-1. 식이요법관리"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2-1. 식이요법관리"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no2_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2-2. 운동관리"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2-2. 운동관리"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no2_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2-3. 투약"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2-3. 투약"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no2_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2-4. 신체활동"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2-4. 신체활동"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/index_no2_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2-5. 혈당계"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="2-5. 혈당계"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
 
         <!--목차 끝-->
         <View
@@ -100,20 +100,20 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="내용 시작"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:text="내용 시작"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
         <!--내용 시작-->
         <ExpandableListView
             android:id="@+id/elv"
             android:layout_width="match_parent"
             android:layout_height="1500dp"
-            android:groupIndicator="@null"
             android:fontFamily="@font/my_font_family"
-            android:textStyle="normal"
+            android:groupIndicator="@null"
+            android:textColor="#000000"
             android:textSize="20sp"
-            android:textColor="#000000"/>
+            android:textStyle="normal" />
     </LinearLayout>
 </ScrollView>

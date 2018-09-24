@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.dreamwalker.diabeteseducation.introduction.ChangeLogActivity;
 import com.dreamwalker.diabeteseducation.introduction.DevelopActivity;
 import com.dreamwalker.diabeteseducation.introduction.IntroActivity;

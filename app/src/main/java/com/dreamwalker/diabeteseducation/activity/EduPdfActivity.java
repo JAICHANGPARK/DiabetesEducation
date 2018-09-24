@@ -29,7 +29,7 @@ public class EduPdfActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_pdf);
-        recyclerView = ( RecyclerView ) findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
 
         // 상태바 색 변경
@@ -39,7 +39,7 @@ public class EduPdfActivity extends AppCompatActivity {
 
         RecyclerView.ItemAnimator animator = recyclerView.getItemAnimator();
         if (animator instanceof DefaultItemAnimator) {
-            (( DefaultItemAnimator ) animator).setSupportsChangeAnimations(false);
+            ((DefaultItemAnimator) animator).setSupportsChangeAnimations(false);
         }
 
         adapter = new EduAdapter(this, makeGenres());

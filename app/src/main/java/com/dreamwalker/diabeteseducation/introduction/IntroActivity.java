@@ -43,7 +43,7 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     // 스크롤뷰 설정
-    public void set_scroll(){
+    public void set_scroll() {
         ScrollView scrollview = (ScrollView) findViewById(R.id.scrollview);
         scrollview.smoothScrollTo(0, 0);
         // 맨 끝까지 스크롤 시키기
@@ -53,7 +53,7 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     // 객체 생성
-    public void set(){
+    public void set() {
         TextView index_no1 = (TextView) findViewById(R.id.index_no1);
         TextView index_no2_1 = (TextView) findViewById(R.id.index_no2_1);
         TextView index_no2_2 = (TextView) findViewById(R.id.index_no2_2);

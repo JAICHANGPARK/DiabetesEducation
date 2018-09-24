@@ -14,7 +14,6 @@ import java.util.List;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder> {
     public static Context mContext;
-
     private final List<CardItem> mDataList;
     private MyRecyclerViewClickListener mListener;
 

@@ -27,8 +27,8 @@ public class BigViewHolder extends GroupViewHolder {
     public BigViewHolder(View itemView) {
         super(itemView);
 
-        genreName = ( TextView ) itemView.findViewById(R.id.list_item_genre_name);
-        arrow = ( ImageView ) itemView.findViewById(R.id.list_item_genre_arrow);
+        genreName = (TextView) itemView.findViewById(R.id.list_item_genre_name);
+        arrow = (ImageView) itemView.findViewById(R.id.list_item_genre_arrow);
     }
 
     @Override
