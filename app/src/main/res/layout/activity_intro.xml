@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/scrollview"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingRight="5px">
-
+        android:layout_height="match_parent">
         <!--목차 시작-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
         <TextView
             android:id="@+id/index"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:fontFamily="@font/my_font_family"
             android:gravity="center_vertical"
-            android:text="목차"
+            android:text=" 목 차"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="normal" />
 
         <TextView
@@ -112,7 +115,7 @@
             android:gravity="center_vertical"
             android:text=" 내용 시작"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="normal" />
         <!--내용 시작-->
         <ExpandableListView
@@ -124,5 +127,6 @@
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="normal" />
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,9 +1,6 @@
 package com.dreamwalker.diabeteseducation.introduction;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,9 +14,12 @@ import com.dreamwalker.diabeteseducation.R;
 import java.util.ArrayList;
 
 public class IntroActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
-
+    ScrollView scrollview;
     // TODO 확장형 리스트뷰 :사이즈 조절, 내용 추가
     // TODO 스크롤뷰 : 처음 열면 맨 위로 올라오도록!
+
+    int positionY;
+    TextView index_no1, index_no2_1, index_no2_2, index_no2_3, index_no2_4, index_no2_5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_intro);
         set_scroll();
         set();
+
         ExpandableListView elv = (ExpandableListView) findViewById(R.id.elv);
         final ArrayList<Index> index = getData();
         //create and bind to adatper
@@ -37,6 +38,7 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
             @Override
             public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
                 Toast.makeText(getApplicationContext(), index.get(groupPosition).contents.get(childPosition), Toast.LENGTH_LONG).show();
+                // TODO 팝업창으로 하는건 어떨까
                 return false;
             }
         });
@@ -45,21 +47,20 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
     // 스크롤뷰 설정
     public void set_scroll() {
         ScrollView scrollview = (ScrollView) findViewById(R.id.scrollview);
-        scrollview.smoothScrollTo(0, 0);
-        // 맨 끝까지 스크롤 시키기
-        scrollview.fullScroll(ScrollView.FOCUS_DOWN);
+
+        scrollview.scrollTo(0, 0);
         // 수평 스크롤바 사용 가능 설정
         scrollview.setHorizontalScrollBarEnabled(true);
     }
 
     // 객체 생성
     public void set() {
-        TextView index_no1 = (TextView) findViewById(R.id.index_no1);
-        TextView index_no2_1 = (TextView) findViewById(R.id.index_no2_1);
-        TextView index_no2_2 = (TextView) findViewById(R.id.index_no2_2);
-        TextView index_no2_3 = (TextView) findViewById(R.id.index_no2_3);
-        TextView index_no2_4 = (TextView) findViewById(R.id.index_no2_4);
-        TextView index_no2_5 = (TextView) findViewById(R.id.index_no2_5);
+        index_no1 = (TextView) findViewById(R.id.index_no1);
+        index_no2_1 = (TextView) findViewById(R.id.index_no2_1);
+        index_no2_2 = (TextView) findViewById(R.id.index_no2_2);
+        index_no2_3 = (TextView) findViewById(R.id.index_no2_3);
+        index_no2_4 = (TextView) findViewById(R.id.index_no2_4);
+        index_no2_5 = (TextView) findViewById(R.id.index_no2_5);
         index_no1.setOnClickListener(this);
         index_no2_1.setOnClickListener(this);
         index_no2_2.setOnClickListener(this);
@@ -107,8 +108,37 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
+
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.index_no1:
+                scrollview.post(new Runnable() {
+                    public void run() {
+                        scrollview.smoothScrollTo(index_no1.getScrollX(), index_no1.getScrollY());
+                    }
+                });
+                break;
+            case R.id.index_no2_1:
+                int positionY1 = index_no2_1.getTop();
 
+                break;
+            case R.id.index_no2_2:
+                int positionY2 = index_no2_2.getTop();
+
+                break;
+            case R.id.index_no2_3:
+                int positionY3 = index_no2_3.getTop();
+
+                break;
+            case R.id.index_no2_4:
+                int positionY4 = index_no2_4.getTop();
+
+                break;
+            case R.id.index_no2_5:
+                int positionY5 = index_no2_5.getTop();
+
+                break;
+        }
     }
 }
