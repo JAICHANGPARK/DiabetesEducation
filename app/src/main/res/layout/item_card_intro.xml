@@ -25,14 +25,22 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/name" />
+            android:text="@string/name"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="소 속" />
+            android:text="소 속"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <ImageView
             android:layout_width="match_parent"
@@ -53,7 +61,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/assign" />
+            android:text="@string/assign"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
     </LinearLayout>
 
     <LinearLayout
@@ -68,31 +80,51 @@
             android:id="@+id/text_name"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/text_grade"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/text_email"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/text_call"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/text_assign"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
     </LinearLayout>
 </android.support.v7.widget.CardView>
 

@@ -7,6 +7,5 @@
         android:fontStyle="normal"
         android:fontWeight="400"
         app:font="@font/bmhanna_11yrs_ttf"
-        app:fontStyle="normal"
-        app:fontWeight="400" />
+        app:fontStyle="normal" app:fontWeight="400" />
 </font-family>

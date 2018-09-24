@@ -19,7 +19,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu1" />
+            android:text="@string/menu1"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/menu2"
@@ -27,7 +31,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu2" />
+            android:text="@string/menu2"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/menu3"
@@ -35,7 +43,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu3" />
+            android:text="@string/menu3"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
 
         <TextView
             android:id="@+id/menu4"
@@ -43,6 +55,10 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="@string/menu4" />
+            android:text="@string/menu4"
+            android:fontFamily="@font/my_font_family"
+            android:textStyle="normal"
+            android:textSize="20sp"
+            android:textColor="#000000"/>
     </LinearLayout>
 </RelativeLayout>
