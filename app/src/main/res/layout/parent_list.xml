@@ -10,11 +10,13 @@
         android:fontFamily="@font/my_font_family"
         android:textColor="#000000"
         android:textSize="20sp"
+        android:gravity="center_vertical"
         android:textStyle="normal" />
 
     <ImageView
         android:id="@+id/indicator"
         android:layout_width="match_parent"
+        android:gravity="center_vertical"
         android:layout_height="50dp"
         android:layout_toRightOf="@+id/position_tv" />
 </RelativeLayout>
