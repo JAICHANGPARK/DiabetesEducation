@@ -99,9 +99,10 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
             android:fontFamily="@font/my_font_family"
-            android:text="내용 시작"
+            android:text=" 내용 시작"
             android:textColor="#000000"
             android:textSize="20sp"
             android:textStyle="normal" />
