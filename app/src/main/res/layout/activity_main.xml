@@ -2,7 +2,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="2">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -12,9 +13,10 @@
         android:elevation="4dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
             android:fontFamily="@font/my_font_family"
             android:text="@string/oops1"
             android:textColor="#ffffff"
@@ -22,34 +24,56 @@
             android:textStyle="normal" />
     </android.support.v7.widget.Toolbar>
 
-    <Button
-        android:id="@+id/action_introduction"
+    <RelativeLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fontFamily="@font/my_font_family"
-        android:text="앱 소개"
-        android:textSize="20sp"
-        android:textStyle="normal" />
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/action_word"
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/document" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image1"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/my_font_family"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="용 어"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:fontFamily="@font/my_font_family"
-        android:text="용 어"
-        android:textSize="20sp"
-        android:textStyle="normal" />
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/action_image"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3"
-        android:fontFamily="@font/my_font_family"
-        android:text="메뉴얼"
-        android:textSize="20sp"
-        android:textStyle="normal" />
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/task" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image2"
+            android:fontFamily="@font/my_font_family"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#000000"
+            android:text="메뉴얼"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
 </LinearLayout>

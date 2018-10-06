@@ -21,7 +21,6 @@ import com.dreamwalker.diabeteseducation.adapter.EduImageAdapter;
 import java.util.ArrayList;
 
 public class EduImageActivity extends AppCompatActivity {
-//    TODO 이미지 어댑터 수정
 
     ImageView imageView;
     RecyclerView recyclerView;
@@ -42,43 +41,6 @@ public class EduImageActivity extends AppCompatActivity {
 
         imageList.add(R.drawable.image_education_00);
         imageList.add(R.drawable.image_education_01);
-//        imageList.add(R.drawable.image00_10);
-//        imageList.add(R.drawable.image00_20);
-//        imageList.add(R.drawable.image00_30);
-//        imageList.add(R.drawable.image00_40);
-//        imageList.add(R.drawable.image01_00);
-//        imageList.add(R.drawable.image01_10);
-//        imageList.add(R.drawable.image01_20);
-//        imageList.add(R.drawable.image01_30);
-//        imageList.add(R.drawable.image02_00);
-//        imageList.add(R.drawable.image02_10);
-//        imageList.add(R.drawable.image02_20);
-//        imageList.add(R.drawable.image02_30);
-//        imageList.add(R.drawable.image03_00);
-//        imageList.add(R.drawable.image03_10);
-//        imageList.add(R.drawable.image03_20);
-//        imageList.add(R.drawable.image04_00);
-//        imageList.add(R.drawable.image04_10);
-//        imageList.add(R.drawable.image04_20);
-//        imageList.add(R.drawable.image04_30);
-//        imageList.add(R.drawable.image04_40);
-//        imageList.add(R.drawable.image04_50);
-//        imageList.add(R.drawable.image05_00);
-//        imageList.add(R.drawable.image05_10);
-//        imageList.add(R.drawable.image05_20);
-//        imageList.add(R.drawable.image05_30);
-//        imageList.add(R.drawable.image05_40);
-//        imageList.add(R.drawable.image05_60);
-//        imageList.add(R.drawable.image06_00);
-//        imageList.add(R.drawable.image06_10);
-//        imageList.add(R.drawable.image06_20);
-//        imageList.add(R.drawable.image06_30);
-//        imageList.add(R.drawable.image07_00);
-//        imageList.add(R.drawable.image07_10);
-//        imageList.add(R.drawable.image07_20);
-//        imageList.add(R.drawable.image07_30);
-//        imageList.add(R.drawable.image08_00);
-//        imageList.add(R.drawable.image08_10);
 
         adapter = new EduImageAdapter(this, imageList);
         recyclerView.setAdapter(adapter);

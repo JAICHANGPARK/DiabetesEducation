@@ -12,6 +12,6 @@
         android:layout_height="match_parent"
         android:fontFamily="@font/my_font_family"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="25sp"
         android:textStyle="normal" />
 </android.support.design.widget.CoordinatorLayout>

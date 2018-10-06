@@ -15,8 +15,8 @@
     <LinearLayout
         android:layout_width="70dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="80dp"
         android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
         android:orientation="vertical"
         android:weightSum="5">
 
@@ -28,7 +28,7 @@
             android:gravity="center"
             android:text="@string/name"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <TextView
@@ -39,7 +39,7 @@
             android:gravity="center"
             android:text="소 속"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <ImageView
@@ -64,15 +64,15 @@
             android:gravity="center"
             android:text="@string/assign"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="150dp"
         android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
         android:orientation="vertical"
         android:weightSum="5">
 
@@ -83,7 +83,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/my_font_family"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <TextView
@@ -93,7 +93,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/my_font_family"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <TextView
@@ -103,7 +103,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/my_font_family"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <TextView
@@ -113,7 +113,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/my_font_family"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
 
         <TextView
@@ -123,7 +123,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/my_font_family"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textStyle="normal" />
     </LinearLayout>
 </android.support.v7.widget.CardView>

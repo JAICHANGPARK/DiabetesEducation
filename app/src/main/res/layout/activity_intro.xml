@@ -14,119 +14,38 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-        <TextView
-            android:id="@+id/index"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text=" 목 차"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="1. 당뇨그루에 관해"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2. 당뇨그루"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no2_1"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2-1. 식이요법관리"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no2_2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2-2. 운동관리"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no2_3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2-3. 투약"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no2_4"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2-4. 신체활동"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/index_no2_5"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text="2-5. 혈당계"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-
-        <!--목차 끝-->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="#ffb7ac" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:fontFamily="@font/my_font_family"
-            android:gravity="center_vertical"
-            android:text=" 내용 시작"
-            android:textColor="#000000"
-            android:textSize="25sp"
-            android:textStyle="normal" />
-        <!--내용 시작-->
-        <ExpandableListView
-            android:id="@+id/elv"
-            android:layout_width="match_parent"
-            android:layout_height="1500dp"
-            android:fontFamily="@font/my_font_family"
-            android:groupIndicator="@null"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
+            <TextView
+                android:id="@+id/abc"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center_vertical"
+                android:text=" 01. 당뇨그루에 대해"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tvLinkify"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center_vertical"
+                android:text="http://kangwonelec.com"
+                android:autoLink="web"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+            <!--내용 시작-->
+            <ExpandableListView
+                android:id="@+id/elv"
+                android:layout_width="match_parent"
+                android:layout_height="1500dp"
+                android:fontFamily="@font/my_font_family"
+                android:groupIndicator="@null"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="normal" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

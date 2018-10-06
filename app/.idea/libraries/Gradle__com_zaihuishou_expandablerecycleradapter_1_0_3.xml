@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.zaihuishou:expandablerecycleradapter-1.0.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expandablerecycleradapter-1.0.3.aar/483cfc02e9898725cbc11323306eee74/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expandablerecycleradapter-1.0.3.aar/483cfc02e9898725cbc11323306eee74/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zaihuishou/expandablerecycleradapter/1.0.3/51dfeeb7be6342c93302c5ec218e502230a27dd0/expandablerecycleradapter-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
