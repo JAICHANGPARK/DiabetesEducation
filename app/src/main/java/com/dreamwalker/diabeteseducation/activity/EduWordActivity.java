@@ -1,45 +1,32 @@
 package com.dreamwalker.diabeteseducation.activity;
 
-import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.graphics.Color;
+import android.graphics.Point;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
+import android.view.Display;
+import android.view.Window;
+import android.view.WindowManager;
 
-import com.dreamwalker.diabeteseducation.CustomDialog;
-import com.dreamwalker.diabeteseducation.MyDialogListener;
 import com.dreamwalker.diabeteseducation.R;
 import com.dreamwalker.diabeteseducation.adapter.MyRecyclerAdapter;
 import com.dreamwalker.diabeteseducation.model.CardItem;
+import com.dreamwalker.diabeteseducation.model.CustomDialog;
+import com.dreamwalker.diabeteseducation.model.MyDialogListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdapter.MyRecyclerViewClickListener {
-
-    private static final String TAG = MainActivity.class.getSimpleName();
     private MyRecyclerAdapter mAdapter;
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
-
-
-        // 상태바 색 변경
-        View view = getWindow().getDecorView();
-        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
-
-        RecyclerView recyclerView = ( RecyclerView ) findViewById(R.id.recycler_view);
+        setStatusbar();
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(false);
 
         // 레이아웃 매니저로 LinearLayoutManager를 설정
@@ -68,22 +55,22 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         mAdapter = new MyRecyclerAdapter(dataList);
         mAdapter.setOnClickListener(this);
         recyclerView.setAdapter(mAdapter);
+        }
 
-        // 구분선
-        // 이쁘면 메뉴얼쪽에도 추가하자
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), new LinearLayoutManager(this).getOrientation());
-        recyclerView.addItemDecoration(dividerItemDecoration);
+    // 상태바 색 변경
+    public void setStatusbar(){
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryPurle));
     }
 
     // 클릭 이벤트
     @Override
     public void onItemClicked(int position) {
-
         CustomDialog dialog = new CustomDialog(EduWordActivity.this, title(position), content(position));
         // 바깥 클릭 시 꺼짐
         dialog.setCanceledOnTouchOutside(true);
-
-
         dialog.setDialogListener(new MyDialogListener() {
             @Override
             public void onPositiveClicked(String title, String content) {
@@ -91,10 +78,18 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         });
         // 생성
         dialog.create();
-        // 효과주고싶은데..
         dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
         // 쇼
         dialog.show();
+        // 디스플레이 해상도를 가져와서
+        Display display = getWindowManager().getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        // 비율에 맞게 다이얼로그 크기를 지정
+        Window window = dialog.getWindow();
+        int x = (int)(size.x * 0.8f);
+        int y = (int)(size.y * 0.55f);
+        window.setLayout(x, y);
     }
 
     String title(int position) {

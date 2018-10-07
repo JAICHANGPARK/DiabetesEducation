@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation;
+package com.dreamwalker.diabeteseducation.model;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.dreamwalker.diabeteseducation.R;
 
 public class CustomDialog extends Dialog {
 
@@ -33,14 +35,14 @@ public class CustomDialog extends Dialog {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dialog_custom);
 
-        text_title = ( TextView ) findViewById(R.id.text_title);
-        text_content = ( TextView ) findViewById(R.id.text_content);
+        text_title = (TextView) findViewById(R.id.text_title);
+        text_content = (TextView) findViewById(R.id.text_content);
 
         text_title.setText(title);
         text_content.setText(content);
 
         // 종료 버튼
-        Button ok_btn = ( Button ) findViewById(R.id.ok_btn);
+        Button ok_btn = (Button) findViewById(R.id.ok_btn);
         ok_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

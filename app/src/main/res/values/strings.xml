@@ -60,36 +60,36 @@
     <string name="child_parent_82">발의 피부상태 관찰하기</string>
     <string name="child_parent_83">당뇨병성 발의 합병증 예방을 위한 지침</string>
 
-    <string name="parent_2_0"> 당뇨병 </string>
-    <string name="parent_2_1"> 공복혈당 </string>
-    <string name="parent_2_2"> 저혈당 </string>
-    <string name="parent_2_3"> 당화혈색소 </string>
-    <string name="parent_2_4"> 당뇨 지식 </string>
-    <string name="parent_2_5"> 자가 간호 </string>
-    <string name="parent_2_6"> 당뇨 자기 관리 </string>
-    <string name="parent_2_7"> 혈당강하제 </string>
-    <string name="parent_2_8"> 내당능장애 </string>
-    <string name="parent_2_9"> 동맥경화 </string>
-    <string name="parent_2_10"> 포도당 </string>
-    <string name="parent_2_11"> 인슐린 </string>
-    <string name="parent_2_12"> 당부하검사 </string>
-    <string name="parent_2_13"> 인슐린 저항성 </string>
-    <string name="parent_2_14"> 고혈압 </string>
+    <string name="parent_2_0"> 01. 당뇨병 </string>
+    <string name="parent_2_1"> 02. 공복혈당 </string>
+    <string name="parent_2_2"> 03. 저혈당 </string>
+    <string name="parent_2_3"> 04. 당화혈색소 </string>
+    <string name="parent_2_4"> 05. 당뇨 지식 </string>
+    <string name="parent_2_5"> 06. 자가 간호 </string>
+    <string name="parent_2_6"> 07. 당뇨 자기 관리 </string>
+    <string name="parent_2_7"> 08. 혈당강하제 </string>
+    <string name="parent_2_8"> 09. 내당능장애 </string>
+    <string name="parent_2_9"> 10. 동맥경화 </string>
+    <string name="parent_2_10"> 11. 포도당 </string>
+    <string name="parent_2_11"> 12. 인슐린 </string>
+    <string name="parent_2_12"> 13. 당부하검사 </string>
+    <string name="parent_2_13"> 14. 인슐린 저항성 </string>
+    <string name="parent_2_14"> 15. 고혈압 </string>
 
-    <string name="child_parent_2_00"> 혈액 속의 포도당 수치가 정상인보다\n높아 몸에서 포도당이 소변으로\n배출됩니다. </string>
-    <string name="child_parent_2_01"> 8시간 이상 칼로리 섭취를 하지 않고\n정맥에서 채혈해서 뽑은 혈액입니다. </string>
-    <string name="child_parent_2_02"> 혈당이 70mg/dL 이하로 내려가는\n경우를 말하며,\n대개 관련 증상이 있습니다. </string>
-    <string name="child_parent_2_03"> 혈당이 증가되어 적혈구에 있는\n혈색소에 포도당이 붙은 상태입니다.\n지난 2-3개월간의 평균 혈당 농도를\n정확히 파악할 수 있는 측정 수치이다. </string>
-    <string name="child_parent_2_04"> 당뇨병의 병인, 증상 및 질병 조절을\n위한 처방 지침에 대한 환자의\n지식의 정도를 의미한다. </string>
-    <string name="child_parent_2_05"> 성숙되어 가는 개인 자신의 생명과\n건강한 기능 상태를 유지하고\n개인적 발전을 이루기 위하여 시작하고\n수행하는 행위를 의미한다. </string>
-    <string name="child_parent_2_06"> 스스로 식이나 운동 등 생활 습관을\n관리하고 혈당을 모니터링하는\n자기관리를 실천하는 것을 의미힌다. </string>
-    <string name="child_parent_2_07"> 당뇨병으로 인한 혈당을 내리기 위해\n먹는 약이다. </string>
-    <string name="child_parent_2_08"> 혈당치가 정상과 당뇨병의 중간에\n있음을 의미한다.\n당뇨병이 심하지 않다고 하여도\n동맥경화증을 일으킬 수 있으므로\n반드시 치료해야 한다. </string>
-    <string name="child_parent_2_09"> 혈관 내벽에 생기며 점차 혈관을 좁게\n하는 문제점이 있다. </string>
-    <string name="child_parent_2_10"> 체내에서 연료로 사용되는\n당의 가장 단순한 형태로\n탄수화물의 소화를 통해 만들어지며\n혈액을 통해 세포로 운반된다. </string>
-    <string name="child_parent_2_11"> 혈당이 세포 안으로 들어갈 수 있도록\n세포의 잠긴 문(수용체)을 열어주는\n열쇠와 같은 작용을 하여\n혈당을 정상 범위로 유지시켜 주는\n역할을 합니다. </string>
-    <string name="child_parent_2_12"> 당뇨병 검사법 중의 하나로 당뇨, 임신성\n당뇨, 당대사이상 등을 정확하게\n진단할 수 있다. </string>
-    <string name="child_parent_2_13"> 몸에서 인슐린의 적용이 감소된\n것을 의미한다.\n인슐린의 기능이 떨어져 세포가\n포도당을 효과적으로 연소하지\n못하는 것을 말한다. </string>
+    <string name="child_parent_2_00"> 혈액 속의 포도당 수치가 정상인보다 높아 몸에서 포도당이 소변으로 배출됩니다. </string>
+    <string name="child_parent_2_01"> 8시간 이상 칼로리 섭취를 하지 않고 정맥에서 채혈해서 뽑은 혈액입니다. </string>
+    <string name="child_parent_2_02"> 혈당이 70mg/dL 이하로 내려가는 경우를 말하며, 대개 관련 증상이 있습니다. </string>
+    <string name="child_parent_2_03"> 혈당이 증가되어 적혈구에 있는 혈색소에 포도당이 붙은 상태입니다. 지난 2-3개월간의 평균 혈당 농도를 정확히 파악할 수 있는 측정 수치이다. </string>
+    <string name="child_parent_2_04"> 당뇨병의 병인, 증상 및 질병 조절을 위한 처방 지침에 대한 환자의 지식의 정도를 의미한다. </string>
+    <string name="child_parent_2_05"> 성숙되어 가는 개인 자신의 생명과 건강한 기능 상태를 유지하고 개인적 발전을 이루기 위하여 시작하고 수행하는 행위를 의미한다. </string>
+    <string name="child_parent_2_06"> 스스로 식이나 운동 등 생활 습관을 관리하고 혈당을 모니터링하는 자기관리를 실천하는 것을 의미힌다. </string>
+    <string name="child_parent_2_07"> 당뇨병으로 인한 혈당을 내리기 위해 먹는 약이다. </string>
+    <string name="child_parent_2_08"> 혈당치가 정상과 당뇨병의 중간에 있음을 의미한다. 당뇨병이 심하지 않다고 하여도 동맥경화증을 일으킬 수 있으므로 반드시 치료해야 한다. </string>
+    <string name="child_parent_2_09"> 혈관 내벽에 생기며 점차 혈관을 좁게 하는 문제점이 있다. </string>
+    <string name="child_parent_2_10"> 체내에서 연료로 사용되는 당의 가장 단순한 형태로 탄수화물의 소화를 통해 만들어지며 혈액을 통해 세포로 운반된다. </string>
+    <string name="child_parent_2_11"> 혈당이 세포 안으로 들어갈 수 있도록 세포의 잠긴 문(수용체)을 열어주는 열쇠와 같은 작용을 하여 혈당을 정상 범위로 유지시켜 주는 역할을 합니다. </string>
+    <string name="child_parent_2_12"> 당뇨병 검사법 중의 하나로 당뇨, 임신성 당뇨, 당대사이상 등을 정확하게 진단할 수 있다. </string>
+    <string name="child_parent_2_13"> 몸에서 인슐린의 적용이 감소된 것을 의미한다. 인슐린의 기능이 떨어져 세포가 포도당을 효과적으로 연소하지 못하는 것을 말한다. </string>
     <string name="child_parent_2_14"> 혈압이 정상치보다 높은 경우입니다. </string>
 
     <string name="oops1"> EDUCATION </string>
@@ -101,4 +101,36 @@
     <string name="dialog_content"> 문해력이 낮은 어르신들을 위한 교육용 앱으로, 이해하기 쉽게 제작하였습니다.\n------도움주신분들------\nMANUAL액티비티 제작자 : 박제창\n자바+안드로이드를 다루는 기술\n안드로이드 앱 프로그래밍\n다이얼로그 소스 참고 : 키위남블로그\n리사이클러뷰 소스 참고 : 김정현의 안드로이드 코딩 여행기 블로그\n등등 도움주신 여러분들 감사합니다. </string>
     <string name="dialog_title2"> 개발자정보 </string>
     <string name="dialog_content2"> 평범한 대학교 전자공학 4학년 양지훈입니다.\n잘 부탁드리겠습니다. </string>
+
+    <string name="toolbar_text">MAIN</string>
+    <string name="ok">확인</string>
+
+    <!--리사이클러뷰-->
+    <string name="name">이 름</string>
+    <string name="grade">학 력</string>
+    <string name="assign">담 당</string>
+
+    <!--메뉴 4개-->
+    <string name="menu1">01. 당뇨그루에 대해</string>
+    <string name="menu2">02. 버전정보</string>
+    <string name="menu3">03. 개발자정보</string>
+    <string name="menu4">04. Change log</string>
+
+    <!--메뉴 1. 인트로 내용-->
+    <string name="Intro_content">안녕하세요! 당뇨그루는 강원대학교 회로 및 시스템 설계연구실에서 진행 중인 당뇨 환자를 위한 생활패턴 자동 획득 및 혈당 관리 프로젝트입니다.\n혈당 자기관리를 위한 생활파라미터 자동 취득 디바이스, 애플리케이션 개발, 당뇨 개인 관리를 위해 시작된 프로젝트입니다.\n당뇨그루 서비스는 당뇨병환자 삶의 질 개선을 가장 큰 목표를 두고있습니다.\n당뇨 자기관리는 식이요법, 운동요법, 약물투약, 신체활동 등으로 구성되며 이들은 혈당 수치에 영향을 미치게됩니다.\n따라서, 당뇨그루는 이 모든 파라미터를 무자각 상태에서 취득할 수 있는 디바이스를 개발하여 애플리케이션에서 자동취득되 개인화된 데이터베이스에 생활 정보가 저장됩니다.\n물론 혈당 수치도 저장 가능합니다.</string>
+
+    <!--개발자정보-->
+    <!--ex-->
+    <string name="develop_name0">뿡뿡이</string>
+    <string name="develop_grade0">강원대학교 전자공학전공 3학년</string>
+    <string name="develop_email0">abdcdefg123456@daum.net</string>
+    <string name="develop_call0">010-0000–0000</string>
+    <string name="develop_assign0">총괄</string>
+    <!--1-->
+    <string name="develop_name1">양지훈</string>
+    <string name="develop_grade1">강원대학교 전자공학전공 4학년</string>
+    <string name="develop_email1">kms6742@naver.com</string>
+    <string name="develop_call1">010-5104-7274</string>
+    <string name="develop_assign1">교육 앱 제작</string>
+
 </resources>
