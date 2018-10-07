@@ -6,9 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.EduImageActivity">
+
     <android.support.v7.widget.RecyclerView
-        android:layout_margin="8dp"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_margin="8dp" />
 </android.support.constraint.ConstraintLayout>

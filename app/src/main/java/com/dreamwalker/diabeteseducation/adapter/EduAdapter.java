@@ -15,8 +15,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.dreamwalker.diabeteseducation.activity.EduImageActivity;
 import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.activity.EduImageActivity;
 import com.dreamwalker.diabeteseducation.model.Big;
 import com.dreamwalker.diabeteseducation.model.Child;
 import com.thoughtbot.expandablerecyclerview.ExpandableRecyclerViewAdapter;
@@ -67,7 +67,7 @@ public class EduAdapter extends ExpandableRecyclerViewAdapter<BigViewHolder, Chi
 
     @Override
     public void onBindChildViewHolder(final ChildViewHolder holder, int flatPosition, ExpandableGroup group, int childIndex) {
-        final Child artist = (( Big ) group).getItems().get(childIndex);
+        final Child artist = ((Big) group).getItems().get(childIndex);
         holder.setArtistName(artist.getName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

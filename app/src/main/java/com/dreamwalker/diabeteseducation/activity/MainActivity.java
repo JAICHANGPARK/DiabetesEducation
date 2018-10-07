@@ -1,59 +1,55 @@
 package com.dreamwalker.diabeteseducation.activity;
 
-import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-import com.dreamwalker.diabeteseducation.CustomDialog;
-import com.dreamwalker.diabeteseducation.MyDialogListener;
 import com.dreamwalker.diabeteseducation.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    private final long FINISH_INTERVAL_TIME = 2000;  // 2초안에 BACK버튼 한번더 누르면 종료하겠다!
+    private long backPressedTime = 0;  // 그 2초를 측정하기 위한 변수
 
-    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LinearLayout action_word = ( LinearLayout ) findViewById(R.id.action_word);
+        setToolbar();
+        set();
+        setStatusbar();
+    }
 
-        // 툴바
-        Toolbar mytoolbar = ( Toolbar ) findViewById(R.id.my_toolbar);
+    // 툴바
+    public void setToolbar() {
+        Toolbar mytoolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(mytoolbar);
         getSupportActionBar().setTitle("");
+    }
 
-        // 상태바 색 변경
-        View view = getWindow().getDecorView();
-        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        getWindow().setStatusBarColor(Color.parseColor(getResources().getString(R.color.colorPrimaryPurle)));
+    // 상태바 색 변경
+    public void setStatusbar() {
+        Window window = getWindow();
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryPurle));
+    }
 
-        // 레이아웃(버튼) 이벤트
-        action_word.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 교육(추가자료) 페이지로 이동
-                Intent intent_edu = new Intent(MainActivity.this, EduWordActivity.class);
-                startActivity(intent_edu);
-            }
-        });
-
-        LinearLayout action_image = ( LinearLayout ) findViewById(R.id.action_image);
-        action_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 설정 페이지로 이동
-                Intent intent = new Intent(MainActivity.this, EduPdfActivity.class);
-                startActivity(intent);
-            }
-        });
+    // 객체 생성
+    public void set() {
+        RelativeLayout layout1 = (RelativeLayout) findViewById(R.id.layout1);
+        RelativeLayout layout2 = (RelativeLayout) findViewById(R.id.layout2);
+        layout1.setOnClickListener(this);
+        layout2.setOnClickListener(this);
     }
 
     // 메뉴.xml
@@ -63,38 +59,66 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    // 클릭이벤트
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.layout1:
+                // 용어 페이지로 이동
+                Intent intent_word = new Intent(MainActivity.this, EduWordActivity.class);
+                startActivity(intent_word);
+                break;
+            case R.id.layout2:
+                // 메뉴얼 페이지로 이동
+                Intent intent_image = new Intent(MainActivity.this, EduPdfActivity.class);
+                startActivity(intent_image);
+                break;
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_appinfo:
-                // 앱정보 다이얼로그
-                CustomDialog dialog = new CustomDialog(this, getResources().getString(R.string.dialog_title), getResources().getString(R.string.dialog_content));
-                dialog.setCanceledOnTouchOutside(true);
-
-                dialog.setDialogListener(new MyDialogListener() {
-                    @Override
-                    public void onPositiveClicked(String title, String content) {
-                    }
-                });
-                dialog.create();
-                dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
-                dialog.show();
+            // 앱 평가하기
+            case R.id.item1:
+                Toast.makeText(getApplicationContext(), "플레이스토어 댓글로 강제이동", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.action_myinfo:
-                // 개발자정보 다이얼로그
-                CustomDialog dialog2 = new CustomDialog(this, getResources().getString(R.string.dialog_title2), getResources().getString(R.string.dialog_content2));
-                dialog2.setCanceledOnTouchOutside(true);
-
-                dialog2.setDialogListener(new MyDialogListener() {
-                    @Override
-                    public void onPositiveClicked(String title, String content) {
-                    }
-                });
-                dialog2.create();
-                dialog2.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
-                dialog2.show();
+            case R.id.item2:
+                // 앱 소개 페이지로 이동
+                Intent intent = new Intent(MainActivity.this, AppIntroductionActivity.class);
+                startActivity(intent);
                 break;
         }
-            return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
+    }
+
+    // 뒤로가기 버튼
+    // 한 번 누르면 팝업창
+    @Override
+    public void onBackPressed() {
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+        if (0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime) {
+            super.onBackPressed();
+        } else {
+            backPressedTime = tempTime;
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            dialog.setTitle("종료")
+                    .setMessage("정말 종료하실껀가요?")
+                    .setPositiveButton("예", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    });
+            dialog.create();
+            dialog.show();
+        }
     }
 }
