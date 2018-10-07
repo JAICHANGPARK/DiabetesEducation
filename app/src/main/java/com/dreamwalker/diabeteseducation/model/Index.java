@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation.model;
 
 import java.util.ArrayList;
 

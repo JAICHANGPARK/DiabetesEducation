@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

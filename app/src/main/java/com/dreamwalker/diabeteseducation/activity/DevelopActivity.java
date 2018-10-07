@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.dreamwalker.diabeteseducation.CardItem;
 import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.MyRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +32,8 @@ public class DevelopActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         List<CardItem> dataList = new ArrayList<>();
-        // dataList.add(new CardItem("이미지", "이름", "학력", "이메일", "전화번호x -> 깃허브 주소?", "담당"));
-        dataList.add(new CardItem(getResources().getString(R.string.develop_name0), getResources().getString(R.string.develop_grade0), getResources().getString(R.string.develop_email0), "https://github.com/ABDABD", getResources().getString(R.string.develop_assign0)));
-        dataList.add(new CardItem(getResources().getString(R.string.develop_name1), getResources().getString(R.string.develop_grade1), getResources().getString(R.string.develop_email1), "https://github.com/kin7274", getResources().getString(R.string.develop_assign1)));
+        dataList.add(new CardItem("박제창", "강원대 전자공학전공 석사 2학년", "aristojeff@gmail.com", "https://github.com/JAICHANGPARK", "총괄"));
+        dataList.add(new CardItem(getResources().getString(R.string.develop_name1), "강원대 전자공학 4학년", getResources().getString(R.string.develop_email1), "https://github.com/kin7274", getResources().getString(R.string.develop_assign1)));
         mAdapter = new MyRecyclerAdapter(dataList);
         recyclerView.setAdapter(mAdapter);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(), new LinearLayoutManager(this).getOrientation());

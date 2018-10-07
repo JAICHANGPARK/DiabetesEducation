@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Display;
 import android.view.Window;
 import android.view.WindowManager;
@@ -26,6 +27,7 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edu_word);
         setStatusbar();
+        setToolbar();
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(false);
 
@@ -63,6 +65,13 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.setStatusBarColor(getResources().getColor(R.color.colorPrimaryPurle));
+    }
+
+    // 툴바
+    public void setToolbar() {
+        Toolbar mytoolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(mytoolbar);
+        getSupportActionBar().setTitle("");
     }
 
     // 클릭 이벤트
