@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.layout3:
                 // 영상 페이지로 이동
-                Intent intent_youtube = new Intent(MainActivity.this, EduYoutueActivity.class);
+                Intent intent_youtube = new Intent(MainActivity.this, EduYoutubeActivity.class);
                 startActivity(intent_youtube);
                 break;
         }

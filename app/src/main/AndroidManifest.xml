@@ -22,7 +22,7 @@
         <activity android:name=".activity.EduPdfActivity" />
         <activity android:name=".activity.EduWordActivity" />
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.EduYoutueActivity" />
+        <activity android:name=".activity.EduYoutubeActivity" />
         <activity android:name=".activity.AppIntroductionActivity" />
         <activity android:name=".introduction.ChangeLogActivity" />
         <activity android:name=".introduction.DevelopActivity" />
