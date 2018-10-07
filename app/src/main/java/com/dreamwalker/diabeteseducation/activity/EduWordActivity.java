@@ -79,7 +79,6 @@ public class EduWordActivity extends AppCompatActivity implements MyRecyclerAdap
         // 생성
         dialog.create();
         dialog.getWindow().getAttributes().windowAnimations = R.style.PauseDialogAnimation;
-        // 쇼
         dialog.show();
         // 디스플레이 해상도를 가져와서
         Display display = getWindowManager().getDefaultDisplay();
