@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -13,6 +13,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.adapter.MyAdapter;
+import com.dreamwalker.diabeteseducation.model.Index;
 
 import java.util.ArrayList;
 
