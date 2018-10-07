@@ -48,8 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void set() {
         RelativeLayout layout1 = (RelativeLayout) findViewById(R.id.layout1);
         RelativeLayout layout2 = (RelativeLayout) findViewById(R.id.layout2);
+        RelativeLayout layout3 = (RelativeLayout) findViewById(R.id.layout3);
         layout1.setOnClickListener(this);
         layout2.setOnClickListener(this);
+        layout3.setOnClickListener(this);
     }
 
     // 메뉴.xml
@@ -72,6 +74,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // 메뉴얼 페이지로 이동
                 Intent intent_image = new Intent(MainActivity.this, EduPdfActivity.class);
                 startActivity(intent_image);
+                break;
+            case R.id.layout3:
+                // 영상 페이지로 이동
+                Intent intent_youtube = new Intent(MainActivity.this, EduYoutueActivity.class);
+                startActivity(intent_youtube);
                 break;
         }
     }
