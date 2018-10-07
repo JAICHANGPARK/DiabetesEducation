@@ -6,7 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".activity.EduPdfActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/my_font_family"
+            android:text="MANUAL"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+    </android.support.v7.widget.Toolbar>
+
     <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="?attr/actionBarSize"
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
