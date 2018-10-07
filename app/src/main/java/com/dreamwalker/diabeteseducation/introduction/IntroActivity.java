@@ -26,9 +26,7 @@ public class IntroActivity extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_intro);
         setStatusbar();
         set_scroll();
-
         TextView tvLinkify = (TextView) findViewById(R.id.tvLinkify);
-
         TextView abc = (TextView) findViewById(R.id.abc);
         elv = (ExpandableListView) findViewById(R.id.elv);
         final ArrayList<Index> index = getData();
