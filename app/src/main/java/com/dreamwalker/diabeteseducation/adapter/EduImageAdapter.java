@@ -21,7 +21,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.ArrayList;
 
-public class EduImageAdapter extends RecyclerView.Adapter<EduImageAdapter.EduImageViewHolder> {
+public class EduImageAdapter extends RecyclerView.Adapter<EduImageAdapter.EduImageViewHolder>{
 
     Context context;
     ArrayList<Integer> imageList;
@@ -48,7 +48,7 @@ public class EduImageAdapter extends RecyclerView.Adapter<EduImageAdapter.EduIma
         return imageList.size();
     }
 
-    class EduImageViewHolder extends RecyclerView.ViewHolder {
+    class EduImageViewHolder extends RecyclerView.ViewHolder{
         PhotoView imageView;
 
         public EduImageViewHolder(@NonNull View itemView) {
