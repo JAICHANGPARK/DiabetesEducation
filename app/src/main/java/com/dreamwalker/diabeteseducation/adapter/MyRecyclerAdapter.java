@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.dreamwalker.diabeteseducation.model.CardItem;
 import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.model.CardItem;
 
 import java.util.List;
 
@@ -61,7 +61,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
 
         public ViewHolder(View itemView) {
             super(itemView);
-            contents = ( TextView ) itemView.findViewById(R.id.title_text);
+            contents = (TextView) itemView.findViewById(R.id.title_text);
         }
     }
 
