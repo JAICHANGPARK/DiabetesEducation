@@ -2,7 +2,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:weightSum="2">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -12,47 +13,67 @@
         android:elevation="4dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/my_font_family"
             android:text="@string/oops1"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="normal" />
     </android.support.v7.widget.Toolbar>
 
-    <LinearLayout
-        android:id="@+id/action_word"
+    <RelativeLayout
+        android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/selector_image"
-        android:orientation="horizontal">
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/document" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_below="@+id/image1"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/my_font_family"
             android:gravity="center"
-            android:text="@string/oops2"
             android:textColor="#000000"
-            android:textSize="60sp"/>
-    </LinearLayout>
+            android:text="용 어"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/action_image"
+    <RelativeLayout
+        android:id="@+id/layout2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/selector_image2"
-        android:orientation="horizontal">
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/task" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_below="@+id/image2"
+            android:fontFamily="@font/my_font_family"
+            android:layout_marginTop="5dp"
             android:gravity="center"
-            android:text="@string/oops3"
             android:textColor="#000000"
-            android:textSize="60sp"/>
-    </LinearLayout>
+            android:text="메뉴얼"
+            android:textSize="30sp"
+            android:textStyle="normal" />
+    </RelativeLayout>
 </LinearLayout>

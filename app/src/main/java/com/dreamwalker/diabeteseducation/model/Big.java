@@ -13,11 +13,7 @@ import com.thoughtbot.expandablerecyclerview.models.ExpandableGroup;
 import java.util.List;
 
 public class Big extends ExpandableGroup<Child> {
-
-
     public Big(String title, List<Child> items) {
         super(title, items);
     }
-
-
 }
