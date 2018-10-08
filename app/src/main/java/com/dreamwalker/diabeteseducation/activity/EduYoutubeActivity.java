@@ -3,6 +3,7 @@ package com.dreamwalker.diabeteseducation.activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdapter.YoutubeViewClickListener {
+    // TODO "주의! 3G/4G환경에서는 데이터 요금이 발생할 수 있습니다." 알림창 띄우기
     String youtube_link[] = {
             // 질병관리본부(1)
             "https://www.youtube.com/watch?v=IVaW-aJZ9Vo&t=29s"
@@ -37,6 +39,7 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
         setToolbar();
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setAnimation();
         recyclerView.setHasFixedSize(false);
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
