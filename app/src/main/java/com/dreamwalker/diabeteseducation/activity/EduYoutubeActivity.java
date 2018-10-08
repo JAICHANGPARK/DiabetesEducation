@@ -1,10 +1,13 @@
 package com.dreamwalker.diabeteseducation.activity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +24,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdapter.YoutubeViewClickListener {
-    // TODO "주의! 3G/4G환경에서는 데이터 요금이 발생할 수 있습니다." 알림창 띄우기
+    // TODO 저작권 추가
+
+    private Handler mHandler;
+    Context mContext;
     String youtube_link[] = {
             // 질병관리본부(1)
             "https://www.youtube.com/watch?v=IVaW-aJZ9Vo&t=29s"
@@ -35,16 +41,39 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.youtube);
+        mContext = this;
+        mHandler = new Handler();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(mContext)
+                                    .setTitle("주의")
+                                    .setMessage("3G/4G환경에서는 데이터 요금이 발생할 수 있습니다.")
+                                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int which) {
+                                        }
+                                    });
+                            dialog.create()
+                                    .show();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, 1000);
+            }
+        });
+
         setStatusbar();
         setToolbar();
-
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setAnimation();
         recyclerView.setHasFixedSize(false);
-
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-
         List<YoutubeItem> youtubeList = new ArrayList<>();
         // 질병관리본부
         youtubeList.add(new YoutubeItem(R.drawable.youtube_image_01, "[질병관리본부 - 심뇌혈관질환예방관리]_인포그래픽 동영상_'13년_당뇨병편"));

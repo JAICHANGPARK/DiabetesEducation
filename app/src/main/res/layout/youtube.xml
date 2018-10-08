@@ -27,16 +27,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize" >
-
-        <!--킹작권-->
-        <TextView
-            android:text="저작권"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:fontFamily="@font/my_font_family"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
     </android.support.v7.widget.RecyclerView>
 
 
