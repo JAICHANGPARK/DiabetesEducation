@@ -38,58 +38,14 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
     };
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.youtube);
         mContext = this;
-        mHandler = new Handler();
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            AlertDialog.Builder dialog = new AlertDialog.Builder(mContext)
-                                    .setTitle("주의")
-                                    .setMessage("3G/4G환경에서는 데이터 요금이 발생할 수 있습니다.")
-                                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                                        @Override
-                                        public void onClick(DialogInterface dialogInterface, int which) {
-                                        }
-                                    });
-                            dialog.create()
-                                    .show();
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, 1000);
-            }
-        });
-
+        wifi_alarm();
         setStatusbar();
         setToolbar();
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(false);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        List<YoutubeItem> youtubeList = new ArrayList<>();
-        // 질병관리본부
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_01, "[질병관리본부 - 심뇌혈관질환예방관리]_인포그래픽 동영상_'13년_당뇨병편"));
-        // 삼성서울병원
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_02, "으랏차차_당뇨_1_당신의 혈당은 안녕하십니까 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_03, "으랏차차_당뇨_2_당뇨병, 피할 수 있는 방안은 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_04, "으랏차차_당뇨_3_당뇨병 전단계를 관리하는 법 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_05, "으랏차차_당뇨_4_당뇨,발견했다면 이것만은 챙기자 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_06, "으랏차차_당뇨_5_당뇨관리, 밥상과 운동에 답이 있다 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_07, "으랏차차_당뇨_6_당뇨에 관한 10가지 오해와 진실 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_08, "자가혈당측정 똑똑하게 활용하기[환자설명자료]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_09, "저혈당의 예방과 치료[환자설명자료]"));
-        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_10, "뇌졸중과 당뇨병은 어떤 연관성이 있나요?[1분 메디캠_뇌졸중 편]"));
-        YoutubeAdapter mYouItems = new YoutubeAdapter(youtubeList);
-        mYouItems.setOnClickListener(this);
-        recyclerView.setAdapter(mYouItems);
+        recyclerview_dduddak();
     }
 
     // 상태바 색 변경
@@ -107,12 +63,73 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
         getSupportActionBar().setTitle("");
     }
 
+    // 1초 후 와이파이 권장 알람
+    public void wifi_alarm(){
+        mHandler = new Handler();
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                mHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            // 알람
+                            AlertDialog.Builder dialog = new AlertDialog.Builder(mContext)
+                                    .setTitle("주의")
+                                    .setMessage("3G/4G환경에서는 데이터 요금이 발생할 수 있습니다.")
+                                    .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int which) {
+                                        }
+                                    });
+                            dialog.create()
+                                    .show();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    // 1초 후
+                }, 1000);
+            }
+        });
+    }
+
+    // 리사이클러뷰
+    public void recyclerview_dduddak(){
+        // 리사이클러뷰
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView.setHasFixedSize(false);
+        // 레이아웃매니저
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        // 리스트 생성
+        List<YoutubeItem> youtubeList = new ArrayList<>();
+        //// 질병관리본부
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_01, "[질병관리본부 - 심뇌혈관질환예방관리]_인포그래픽 동영상_'13년_당뇨병편"));
+        //// 삼성서울병원
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_02, "으랏차차_당뇨_1_당신의 혈당은 안녕하십니까 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_03, "으랏차차_당뇨_2_당뇨병, 피할 수 있는 방안은 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_04, "으랏차차_당뇨_3_당뇨병 전단계를 관리하는 법 - 내분비대사내과 김재현 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_05, "으랏차차_당뇨_4_당뇨,발견했다면 이것만은 챙기자 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_06, "으랏차차_당뇨_5_당뇨관리, 밥상과 운동에 답이 있다 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_07, "으랏차차_당뇨_6_당뇨에 관한 10가지 오해와 진실 - 내분비대사내과 허규연 교수[의료진 ON Line 강의]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_08, "자가혈당측정 똑똑하게 활용하기[환자설명자료]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_09, "저혈당의 예방과 치료[환자설명자료]"));
+        youtubeList.add(new YoutubeItem(R.drawable.youtube_image_10, "뇌졸중과 당뇨병은 어떤 연관성이 있나요?[1분 메디캠_뇌졸중 편]"));
+        // 어댑터
+        YoutubeAdapter mYouItems = new YoutubeAdapter(youtubeList);
+        mYouItems.setOnClickListener(this);
+        recyclerView.setAdapter(mYouItems);
+    }
+
+    // 리사이클러뷰 클릭 이벤트
     @Override
     public void onItemClicked(int position) {
 //        Toast.makeText(getApplicationContext(), "선택값 = " + position, Toast.LENGTH_SHORT).show();
         onURL(youtube_link[position]);
     }
 
+    // 클릭 시 해당 URL 연결
     public void onURL(String link) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         startActivity(intent);
