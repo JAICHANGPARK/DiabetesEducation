@@ -25,7 +25,7 @@ import java.util.List;
 
 public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdapter.YoutubeViewClickListener {
     // TODO 저작권 추가
-
+    // TODO 영사을 뷰페이저로 할까.. 저작권도 표시하기좋고
     private Handler mHandler;
     Context mContext;
     String youtube_link[] = {
