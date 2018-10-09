@@ -25,7 +25,6 @@ import java.util.List;
 
 public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdapter.YoutubeViewClickListener {
     // TODO 저작권 추가
-    // TODO 영사을 뷰페이저로 할까.. 저작권도 표시하기좋고
     private Handler mHandler;
     Context mContext;
     String youtube_link[] = {
@@ -35,6 +34,8 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
             , "https://www.youtube.com/watch?v=raciLwP--L0", "https://www.youtube.com/watch?v=s5tbhH8bwEI", "https://www.youtube.com/watch?v=7NDAbacKVqQ"
             , "https://www.youtube.com/watch?v=xIY46uFujZQ", "https://www.youtube.com/watch?v=cnmMqfAliGU", "https://www.youtube.com/watch?v=glte-8TI4L4"
             , "https://www.youtube.com/watch?v=2fKh70kh9tM&t=11s", "https://www.youtube.com/watch?v=19HG-_vNEAU&t=4s", "https://www.youtube.com/watch?v=2A1qBDpbQEs"
+            //
+            , "", "http://www.samsunghospital.com/home/healthInfo/main.do"
     };
 
     @Override
@@ -116,6 +117,10 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
         youtubeList.add(new YoutubeItem(R.drawable.youtube_image_08, "자가혈당측정 똑똑하게 활용하기[환자설명자료]"));
         youtubeList.add(new YoutubeItem(R.drawable.youtube_image_09, "저혈당의 예방과 치료[환자설명자료]"));
         youtubeList.add(new YoutubeItem(R.drawable.youtube_image_10, "뇌졸중과 당뇨병은 어떤 연관성이 있나요?[1분 메디캠_뇌졸중 편]"));
+        // 출처
+        youtubeList.add(new YoutubeItem(R.drawable.img_opentype04, "인포그래픽 동영상_'13년_당뇨병편 저작물은 \n" + "공공누리 제4유형(출처표시+상업적이용금지+변경금지) 조건에 따라 이용할 수 있습니다."));
+        youtubeList.add(new YoutubeItem(R.drawable.samsungseoulhospital, "출처 : 삼성서울병원\n" +"더 자세한 정보를 얻고싶다면 홈페이지를 방문해주세요. 클릭시 이동합니다."));
+
         // 어댑터
         YoutubeAdapter mYouItems = new YoutubeAdapter(youtubeList);
         mYouItems.setOnClickListener(this);
@@ -126,7 +131,9 @@ public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdap
     @Override
     public void onItemClicked(int position) {
 //        Toast.makeText(getApplicationContext(), "선택값 = " + position, Toast.LENGTH_SHORT).show();
-        onURL(youtube_link[position]);
+        if(position !=10){
+            onURL(youtube_link[position]);
+        }
     }
 
     // 클릭 시 해당 URL 연결
