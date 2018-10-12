@@ -28,16 +28,15 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:weightSum="2"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <RelativeLayout
-            android:minWidth="3dp"
-
             android:id="@+id/layout1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:background="@drawable/border">
 
             <ImageView
                 android:id="@+id/image1"
@@ -92,7 +91,8 @@
         android:id="@+id/layout3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:background="@drawable/border1">
 
         <ImageView
             android:id="@+id/image3"
