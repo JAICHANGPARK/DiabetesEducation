@@ -32,6 +32,8 @@
         android:orientation="horizontal">
 
         <RelativeLayout
+            android:minWidth="3dp"
+
             android:id="@+id/layout1"
             android:layout_width="0dp"
             android:layout_height="match_parent"

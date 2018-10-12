@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--오버플로우메뉴-->
     <!--앱 평가하기-->
-
     <item
         android:id="@+id/item1"
         android:title="앱 평가하기"
-        app:showAsAction="withText"/>
+        app:showAsAction="withText" />
     <!--앱 소개-->
     <item
         android:id="@+id/item2"
         android:title="앱 소개"
-        app:showAsAction="withText"/>
+        app:showAsAction="withText" />
 </menu>
