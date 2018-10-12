@@ -12,13 +12,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dreamwalker.diabeteseducation.R;
 import com.dreamwalker.diabeteseducation.adapter.YoutubeAdapter;
 import com.dreamwalker.diabeteseducation.model.YoutubeItem;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +30,7 @@ import java.util.List;
 public class EduYoutubeActivity extends AppCompatActivity implements YoutubeAdapter.YoutubeViewClickListener {
     // TODO 저작권 추가
     private Handler mHandler;
+    public TextView mTextView;
     Context mContext;
     String youtube_link[] = {
             // 질병관리본부(1)
