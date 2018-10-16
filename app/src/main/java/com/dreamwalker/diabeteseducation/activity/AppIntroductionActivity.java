@@ -10,9 +10,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dreamwalker.diabeteseducation.R;
-import com.dreamwalker.diabeteseducation.introduction.ChangeLogActivity;
-import com.dreamwalker.diabeteseducation.introduction.DevelopActivity;
-import com.dreamwalker.diabeteseducation.introduction.IntroActivity;
 
 public class AppIntroductionActivity extends AppCompatActivity implements View.OnClickListener {
     @Override

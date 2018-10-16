@@ -24,55 +24,93 @@
             android:textStyle="normal" />
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
-        android:id="@+id/layout1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/border">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/document" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image1"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center"
+                android:text="용 어"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/task" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image2"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/my_font_family"
+                android:gravity="center"
+                android:text="메뉴얼"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border1">
 
         <ImageView
-            android:id="@+id/image1"
+            android:id="@+id/image3"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/document" />
+            android:src="@drawable/youtube" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image1"
+            android:layout_below="@+id/image3"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/my_font_family"
             android:gravity="center"
+            android:text="영 상"
             android:textColor="#000000"
-            android:text="용 어"
-            android:textSize="30sp"
-            android:textStyle="normal" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/layout2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <ImageView
-            android:id="@+id/image2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/task" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/image2"
-            android:fontFamily="@font/my_font_family"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:text="메뉴얼"
             android:textSize="30sp"
             android:textStyle="normal" />
     </RelativeLayout>

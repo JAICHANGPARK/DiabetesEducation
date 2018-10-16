@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,15 +8,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dreamwalker.diabeteseducation.R;
-
 import java.util.List;
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.ViewHolder> {
     public static Context mContext;
     private final List<CardItem> mDataList;
-    private MyRecyclerViewClickListener mListener;
 
+    //
     // Adapter 초기화 및 생성자로 받은 데이터기반으로 Adapter 내 데이터 세팅
     public MyRecyclerAdapter(List<CardItem> dataList) {
         mDataList = dataList;
@@ -49,18 +47,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
         holder.email.setText(item.getEmail());
         holder.call.setText(item.getCall());
         holder.assign.setText(item.getAssign());
-
-        // 클릭 이벤트
-        if (mListener != null) {
-            // 현재 위치
-            final int pos = holder.getAdapterPosition();
-            holder.itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    mListener.onItemClicked(pos);
-                }
-            });
-        }
     }
 
     // 아이템의 수
@@ -84,22 +70,6 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
             email = (TextView) itemView.findViewById(R.id.text_email);
             call = (TextView) itemView.findViewById(R.id.text_call);
             assign = (TextView) itemView.findViewById(R.id.text_assign);
-
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(mContext, "click", Toast.LENGTH_LONG).show();
-                }
-            });
         }
-    }
-
-    public void setOnClickListener(MyRecyclerViewClickListener listener) {
-        mListener = listener;
-    }
-
-    public interface MyRecyclerViewClickListener {
-        // 아이템 전체 부분의 클릭
-        void onItemClicked(int position);
     }
 }

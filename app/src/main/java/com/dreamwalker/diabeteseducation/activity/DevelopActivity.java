@@ -1,4 +1,4 @@
-package com.dreamwalker.diabeteseducation.introduction;
+package com.dreamwalker.diabeteseducation.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.dreamwalker.diabeteseducation.R;
+import com.dreamwalker.diabeteseducation.CardItem;
+import com.dreamwalker.diabeteseducation.MyRecyclerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
