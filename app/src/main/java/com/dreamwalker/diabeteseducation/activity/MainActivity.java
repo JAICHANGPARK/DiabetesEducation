@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private final long FINISH_INTERVAL_TIME = 2000;  // 2초안에 BACK버튼 한번더 누르면 종료하겠다!
     private long backPressedTime = 0;  // 그 2초를 측정하기 위한 변수
 
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
