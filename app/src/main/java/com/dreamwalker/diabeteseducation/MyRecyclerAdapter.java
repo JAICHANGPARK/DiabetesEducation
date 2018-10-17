@@ -13,6 +13,7 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<MyRecyclerAdapter.Vi
     public static Context mContext;
     private final List<CardItem> mDataList;
 
+    //
     // Adapter 초기화 및 생성자로 받은 데이터기반으로 Adapter 내 데이터 세팅
     public MyRecyclerAdapter(List<CardItem> dataList) {
         mDataList = dataList;
