@@ -16,6 +16,7 @@ public class YoutubeAdapter extends RecyclerView.Adapter<YoutubeAdapter.ViewHold
 
     private final List<YoutubeItem> mDataList;
     private YoutubeViewClickListener mListener;
+    private static int TYPE_FOOTER = 3;
 
     public YoutubeAdapter(List<YoutubeItem> dataList) {
         mDataList = dataList;

@@ -20,6 +20,7 @@ public class AppIntroductionActivity extends AppCompatActivity implements View.O
         setStatusbar();
     }
 
+    //
     // 객체 생성
     public void set() {
         TextView menu1 = (TextView) findViewById(R.id.menu1);

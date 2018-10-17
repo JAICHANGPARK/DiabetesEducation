@@ -9,8 +9,8 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.dreamwalker.diabeteseducation.CardItem;
-import com.dreamwalker.diabeteseducation.R;
 import com.dreamwalker.diabeteseducation.MyRecyclerAdapter;
+import com.dreamwalker.diabeteseducation.R;
 
 import java.util.ArrayList;
 import java.util.List;
